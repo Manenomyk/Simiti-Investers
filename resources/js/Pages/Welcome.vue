@@ -37,6 +37,10 @@ defineProps({
                 <input type="text" placeholder="Search for Suppliers " class="rounded-lg "/>
                 <button type="reset" class="px-8 py-2.5 bg-green-900 text-white rounded-lg ml-2 hover:bg-green-800">Search</button>
              </div>
+             <div class="flex justify-center gap-2 mt-5">
+                <h5 class="font-bold text-blue-600">Want to explore more ?</h5>
+                <a href="/register" class="font-bold text-yellow-400">Join Us for free</a>
+             </div>
         </div>
         
 
