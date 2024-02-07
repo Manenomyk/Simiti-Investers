@@ -28,8 +28,8 @@ defineProps({
             
         </div>
 
-        <div>
-            wertyuio
+        <div class="w-[50%] text-center">
+            <h1 class="font-bold text-5xl text-gray-300"> <span class="text-yellow-400">Find the Best</span> Construction Material Suppliers </h1>
         </div>
         
 
