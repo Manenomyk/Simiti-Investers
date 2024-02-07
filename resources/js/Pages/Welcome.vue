@@ -28,8 +28,15 @@ defineProps({
             
         </div>
 
-        <div class="w-[50%] text-center">
-            <h1 class="font-bold text-5xl text-gray-300"> <span class="text-yellow-400">Find the Best</span> Construction Material Suppliers </h1>
+        <div class="md:w-[50%] text-center">
+            <h1 class="font-bold text-5xl text-gray-300">
+                 <span class="text-yellow-400">Find the Best</span> Construction Material Suppliers
+             </h1>
+             <div>
+                <h3 class="mt-[2rem] mb-[2rem] text-lg font-bold text-green-500">Find access to the markets leading brands</h3>
+                <input type="text" placeholder="Search for Suppliers " class="rounded-lg "/>
+                <button type="reset" class="px-8 py-2.5 bg-green-900 text-white rounded-lg ml-2 hover:bg-green-800">Search</button>
+             </div>
         </div>
         
 
