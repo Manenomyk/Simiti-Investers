@@ -13,7 +13,40 @@ defineProps({
 <template>
     <Head title="Welcome" />
         <div class="">
-                <div class="back relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
+
+            <div class=" w-screen justify-item-center">
+                <div class="fixed top-0 left-0 bg-white w-full shadow-md">
+                <div class="container m-auto flex justify-between items-center text-gray-700">
+                    <h1 class="pl-8 py-4 text-xl font-bold">SIMITI</h1>
+                    <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
+                        <li class="bg-green-800 rounded-lg text-white py-2 px-6">Home</li>
+                        <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">About</li>
+                        <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">
+                            <button class="relative flex justify-center items-center gap-5 pt-0 bg-gray-100 border focus:outline-none shadow text-gray-600 rounded focus:ring ring-gray-800 hover:rounded-lg group">
+                <p class="px-4">Find suppliers</p>
+                <span class="border-l p-2 hover:bg-gray-100"><img src="../../Assets/arrow.png" class="w-3" alt=""></span>
+                <div class="absolute hidden group-focus:block z-20 top-full min-w-full w-max bg-white shadow-md mt-1 rounded">
+                    <ul class="text-left border rounded">
+                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
+                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
+                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
+                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
+
+                    </ul>
+                  </div>
+                </button>
+                        </li>
+                        <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">Contact</li>
+                        <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">Faqs</li>
+
+                    </ul>
+                </div>
+            </div>
+
+                
+            </div>
+
+                <div class="back mt-20 relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
                 
                     <div v-if="canLogin" class="sm:absolute sm:top-0 sm:end-0 p-6 text-end z-10">
                         
