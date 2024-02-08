@@ -18,7 +18,7 @@ defineProps({
                 <div class="fixed top-0 left-0 bg-white w-full shadow-md">
                 <div class="container m-auto flex justify-between items-center text-gray-700">
                     <h1 class="pl-8 py-4 text-xl font-bold">SIMITI</h1>
-                    <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
+                    <ul class="hidden md:flex items-center text-base font-semibold cursor-pointer">
                         <li class="bg-green-800 rounded-lg text-white py-2 px-6">Home</li>
                         <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">About</li>
                         <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">
@@ -27,18 +27,29 @@ defineProps({
                 <span class="border-l p-2 hover:bg-gray-100"><img src="../../Assets/arrow.png" class="w-3" alt=""></span>
                 <div class="absolute hidden group-focus:block z-20 top-full min-w-full w-max bg-white shadow-md mt-1 rounded">
                     <ul class="text-left border rounded">
-                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
-                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
-                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
-                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Menu</li>
-
+                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Featured Suppliers </li>
+                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Search By Category</li>
+                        <li class="px-4 py-1 hover:bg-gray-100 border-b">Search By Region</li>
                     </ul>
                   </div>
                 </button>
                         </li>
                         <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">Contact</li>
-                        <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">Faqs</li>
+                        
+                        <li>
+                            <div v-if="canLogin" class=" sm:top-0 sm:end-0 p-6 text-end z-10">
+                        
+                        
+                        <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="font-boldbold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-100">Dashboard</Link>
 
+                    <template v-else>
+                        <Link :href="route('login')" class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6 font-bold text-black hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-100">Log in</Link>
+
+                        <Link v-if="canRegister" :href="route('register')" class="ms-4 font-bold hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6 text-black hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-100">Register</Link>
+                    </template>
+                    
+                </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -46,20 +57,9 @@ defineProps({
                 
             </div>
 
-                <div class="back mt-20 relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
+                <div class="back mt-20  sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
                 
-                    <div v-if="canLogin" class="sm:absolute sm:top-0 sm:end-0 p-6 text-end z-10">
-                        
-                        
-                            <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="font-boldbold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</Link>
-
-                        <template v-else>
-                            <Link :href="route('login')" class="font-bold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</Link>
-
-                            <Link v-if="canRegister" :href="route('register')" class="ms-4 font-bold text-white hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</Link>
-                        </template>
-                        
-                    </div>
+                   
 
                     <div class="md:w-[50%] text-center">
                         <h1 class="font-bold text-5xl text-gray-300">
