@@ -21,7 +21,10 @@ export default {
     },
     variants: {
         extend: {
-            display: ['group-focus']
+            display: ['group-focus'],
+            opacity:['group-focus'],
+            inset:['group-focus']
+
         }
     },
     plugins: [forms, typography],

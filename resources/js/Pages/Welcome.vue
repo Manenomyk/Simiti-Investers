@@ -51,6 +51,20 @@ defineProps({
                 </div>
                         </li>
                     </ul>
+                    <button class="block md:hidden py-3 px-3 mx-2 rounded focus:outline-none hover:bg-gray-200 group">
+                        <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                        <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                        <div class="w-5 h-1 bg-gray-600"></div>
+                        <div class="absolute top-0 -right-full opacity-0 h-screen w-8/12 bg-white border transform group-focus:right-0 group-focus:opacity-100 transition-all duration-300">
+                            <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                                <li class="px-4 py-1 hover:bg-gray-100 border-b">Featured Suppliers </li>
+                                <li class="px-4 py-1 hover:bg-gray-100 border-b">Search By Category</li>
+                                <li class="px-4 py-1 hover:bg-gray-100 border-b">Search By Region</li>
+                    
+                            </ul>
+                        </div>
+
+                    </button>
                 </div>
             </div>
 
