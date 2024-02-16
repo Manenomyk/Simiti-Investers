@@ -192,7 +192,9 @@ defineProps({
                     </div>
                 </div>
 
-                <div class=""></div>
+                <div class="w-full h-[80vh]">
+                    <video src='../../Assets/Towers.mp4' class="w-[100%] h-[100%] object-cover " autoplay muted loop  />
+                </div>
             
         </div>
 </template>
