@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('Suppliers', function(Blueprint $table){
             $table->id();
             $table->string('name');
+            $table->string('email');
             $table->string('gender');
             $table->string('location');
             $table->string('region');
@@ -22,8 +23,8 @@ return new class extends Migration
             $table->string('category');
             $table->string('sub-category');
             $table->string('annual-turnover');
-            $table->boolean('boost');
-            $table->boolean('comment');
+            $table->string('boost');
+            $table->string('comment');
             $table->timestamps();
 
         });

@@ -11,6 +11,7 @@ class Suppliers extends Model
 
     public $fillable = [
         'name',
+        'email',
         'gender',
         'location',
         'region',
