@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Suppliers extends Model
 {
     use HasFactory;
+
+    public $fillable = [
+        'name',
+        'gender',
+        'location',
+        'region',
+        'photo',
+        'phone',
+        'category',
+        'sub-category',
+        'annual-turnover',
+        'boost',
+        'comment',
+
+    ];
 }
