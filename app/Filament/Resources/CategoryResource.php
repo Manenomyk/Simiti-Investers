@@ -23,7 +23,7 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('category')->required(),
+                Forms\Components\TextInput::make('category-name')->required(),
                 Forms\Components\TextInput::make('Sub-category')->nullable(),
             ]);
     }

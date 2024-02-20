@@ -10,7 +10,7 @@ class Category extends Model
     use HasFactory;
 
     public $fillable = [
-        'category',
+        'category-name',
         'sub-category',
        
 
