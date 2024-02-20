@@ -64,7 +64,16 @@ class SuppliersResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('phone'),
+                Tables\Columns\TextColumn::make('location'),
+                Tables\Columns\TextColumn::make('region'),
+                Tables\Columns\TextColumn::make('gender'),
+                Tables\Columns\TextColumn::make('category'),
+                Tables\Columns\TextColumn::make('annual-turnover'),
+
+                
             ])
             ->filters([
                 //
