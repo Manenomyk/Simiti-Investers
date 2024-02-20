@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('Blogs', function(Blueprint $table){
             $table->id();
-            $table->string('title');
-            $table->string('content1');
-            $table->string('image1');
-            $table->string('content2');
-            $table->string('image2');
-            $table->string('video1');
-            $table->string('content3');
-            $table->string('video2');
-            $table->string('profile');
-            $table->string('about');
+            $table->string('title')->required();
+            $table->string('content1')->required();
+            $table->string('image1')->required();
+            $table->string('content2')->nullable();
+            $table->string('image2')->nullable();
+            $table->string('video1')->nullable();
+            $table->string('content3')->nullable();
+            $table->string('video2')->nullable();
+            $table->string('profile')->nullable();
+            $table->string('about')->nullable();
             $table->timestamps();
 
         });

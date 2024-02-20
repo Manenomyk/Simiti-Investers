@@ -12,6 +12,8 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\FileUpload;
 
 class BlogsResource extends Resource
 {
@@ -23,7 +25,17 @@ class BlogsResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('title')->required(),
+                Textarea::make('Content1')->required(),
+                FileUpload::make('image1')->required(),
+                Textarea::make('Content2')->nullable(),
+                FileUpload::make('image2')->nullable(),
+                Textarea::make('Content3')->nullable(),
+                FileUpload::make('video1')->nullable(),
+                Textarea::make('about')->required(),
+                FileUpload::make('video2')->nullable(),
+                FileUpload::make('profile')->required(),
+                
             ]);
     }
 
@@ -31,7 +43,17 @@ class BlogsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('Content1'),
+                Tables\Columns\TextColumn::make('image1'),
+                Tables\Columns\TextColumn::make('Content2'),
+                Tables\Columns\TextColumn::make('image2'),
+                Tables\Columns\TextColumn::make('Content3'),
+                Tables\Columns\TextColumn::make('video1'),
+                Tables\Columns\TextColumn::make('about'),
+                Tables\Columns\TextColumn::make('video2'),
+                Tables\Columns\TextColumn::make('profile'),
+
             ])
             ->filters([
                 //
