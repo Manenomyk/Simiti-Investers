@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\FileUpload;
 
 class SuppliersResource extends Resource
 {
@@ -27,11 +28,6 @@ class SuppliersResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')->required(),
                 Forms\Components\TextInput::make('email')->email()->required(),
-                Radio::make('gender')->required()
-    ->options([
-        'Male',
-        'Female',
-    ]),
                 Forms\Components\TextInput::make('location')->required(),
                 Forms\Components\TextInput::make('region')->required(),
                 Forms\Components\TextInput::make('phone')->required(),
@@ -48,9 +44,18 @@ class SuppliersResource extends Resource
                     'Borehole',
                 ]),
                 Forms\Components\TextInput::make('annual-turnover')->required(),
-                Forms\Components\TextInput::make('photo')->required(),
+                FileUpload::make('photo'),
                 Forms\Components\TextInput::make('comment')->required(),
-                Forms\Components\TextInput::make('boost')->required(),
+                Radio::make('gender')->required()
+                ->options([
+                    'Male',
+                    'Female',
+                ]),
+                Radio::make('boost')->required()
+                ->options([
+                    'Yes',
+                    'No',
+                ]),
 
             ]);
     }
