@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('region');
             $table->string('phone');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->string('category');
             $table->string('sub-category');
             $table->string('annual-turnover');
