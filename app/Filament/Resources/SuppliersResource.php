@@ -12,6 +12,8 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Radio;
 
 class SuppliersResource extends Resource
 {
@@ -23,7 +25,33 @@ class SuppliersResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')->required(),
+                Forms\Components\TextInput::make('email')->email()->required(),
+                Radio::make('gender')->required()
+    ->options([
+        'Male',
+        'Female',
+    ]),
+                Forms\Components\TextInput::make('location')->required(),
+                Forms\Components\TextInput::make('region')->required(),
+                Forms\Components\TextInput::make('phone')->required(),
+                Select::make('category')->required()
+                ->options([
+                     'Heavy machines',
+                   'Drillings',
+                    'Borehole',
+                ]),
+                Select::make('sub-category')->required()
+                ->options([
+                     'Heavy machines',
+                   'Drillings',
+                    'Borehole',
+                ]),
+                Forms\Components\TextInput::make('annual-turnover')->required(),
+                Forms\Components\TextInput::make('photo')->required(),
+                Forms\Components\TextInput::make('comment')->required(),
+                Forms\Components\TextInput::make('boost')->required(),
+
             ]);
     }
 
