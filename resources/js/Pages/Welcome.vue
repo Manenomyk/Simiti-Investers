@@ -317,6 +317,7 @@ defineProps({
                         enrich our network and benefit our valued customers.
                     </p>
                     <button
+                    @click="toggleModal = !toggleModal"
                         className="bg-green-800 w-[200px] rounded-md  my-6 mx-auto md:mx-0 p-2 text-white font-bold"
                     >
                         Register Business
@@ -405,7 +406,7 @@ defineProps({
                     <div
                         class="fixed overflow-y-auto pt-[100%] md:pt-20 bg-black/[0.6] inset-0 flex justify-center items-center z-50"
                         v-if="toggleModal"
-                    >
+                     >
                         <div class="relative mx-auto w-auto max-w-2xl">
                             <div
                                 class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col"
@@ -560,10 +561,8 @@ defineProps({
                                                     name="fav_language"
                                                     value="CSS"
                                                 />
-                                                  <label for="css">No</label
-                                                >
+                                                  <label for="css">No</label>
                                                  
-                                                
                                             </form>
                                         </div>
                                     </div>
