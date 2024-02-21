@@ -403,7 +403,7 @@ defineProps({
                         Become a Supplier
                     </button>
                     <div
-                        class="fixed overflow-y-auto pt-20 bg-black/[0.6] inset-0 flex justify-center items-center z-50"
+                        class="fixed overflow-y-auto pt-[100%] md:pt-20 bg-black/[0.6] inset-0 flex justify-center items-center z-50"
                         v-if="toggleModal"
                     >
                         <div class="relative mx-auto w-auto max-w-2xl">
@@ -411,7 +411,7 @@ defineProps({
                                 class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col"
                             >
                                 <div
-                                    class="text-2xl font-bold mb-5 mt-1 flex justify-between"
+                                    class="text-2xl font-bold mb-5 pt-4 flex justify-between"
                                 >
                                     <span>Register Your Business</span>
                                     <button
@@ -424,61 +424,148 @@ defineProps({
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
                                         <span>Name</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                     <div class="flex flex-col">
                                         <span>Email</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
                                         <span>Gender</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                     <div class="flex flex-col">
                                         <span>Location</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
                                         <span>Region</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                     <div class="flex flex-col">
                                         <span>Phone</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
                                         <span>Photo</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                     <div class="flex flex-col">
-                                        <span>Category</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <span>Annual Turnover</span>
+                                        <input
+                                            class="h-8 rounded"
+                                            type="text"
+                                        />
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
-                                        <span>Sub category</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <span>Category</span>
+                                        <select
+                                            name="Category"
+                                            class="h-8 rounded"
+                                            id="Category"
+                                        >
+                                            <option value="volvo">
+                                                Select Category
+                                            </option>
+                                            <option value="saab">
+                                                Heavy Machine
+                                            </option>
+                                            <option value="mercedes">
+                                                Drilling
+                                            </option>
+                                            <option value="audi">
+                                                Borehole
+                                            </option>
+                                        </select>
                                     </div>
                                     <div class="flex flex-col">
-                                        <span>Boost</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <span>Sub-Category</span>
+                                        <select
+                                            name="Category"
+                                            class="h-8 rounded"
+                                            id="Category"
+                                        >
+                                            <option value="volvo">
+                                                Select Category
+                                            </option>
+                                            <option value="saab">
+                                                Heavy Machine
+                                            </option>
+                                            <option value="mercedes">
+                                                Drilling
+                                            </option>
+                                            <option value="audi">
+                                                Borehole
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
                                         <span>Comment</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <textarea
+                                            class="rounded"
+                                            id="w3review"
+                                            name="w3review"
+                                            rows="4"
+                                        >
+                                        </textarea>
                                     </div>
                                     <div class="flex flex-col">
-                                        <span>Annual Turnover</span>
-                                        <input class="h-8 rounded" type="text">
+                                        <span>Boost</span>
+                                        <div class="flex flex-col">
+                                            <form>
+                                                 
+                                                <input
+                                                    type="radio"
+                                                    id="html"
+                                                    name="fav_language"
+                                                    value="HTML"
+                                                />
+                                                  <label for="html">Yes</label
+                                                ><br />
+                                                 
+                                                <input
+                                                    type="radio"
+                                                    id="css"
+                                                    name="fav_language"
+                                                    value="CSS"
+                                                />
+                                                  <label for="css">No</label
+                                                >
+                                                 
+                                                
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="flex gap-2 justify-end mt-1">
