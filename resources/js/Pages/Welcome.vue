@@ -1,6 +1,8 @@
 <script setup>
 import { Head, Link } from "@inertiajs/vue3";
 import "../../css/welcome.css";
+import Modal from "@/Components/Modal.vue";
+// import method from "vendor/livewire/livewire/js/action/method";
 
 defineProps({
     canLogin: Boolean,
@@ -72,6 +74,11 @@ defineProps({
                             class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                         >
                             Contact
+                        </li>
+                        <li
+                            class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
+                        >
+                            Blogs
                         </li>
 
                         <li>
@@ -390,10 +397,61 @@ defineProps({
                     </button>
                     <button
                         type="reset"
+                        @click="toggleModal = !toggleModal"
                         className="bg-green-900 text-white hover:bg-green-800 w-[200px] rounded-md  my-6 mx-auto md:mx-0 p-2 text-black font-bold"
                     >
                         Become a Supplier
                     </button>
+                    <div
+                        class="fixed overflow-x-hidden overflow-y-auto inset-0 flex justify-center items-center z-50"
+                        v-if="toggleModal"
+                    >
+                        <div class="relative mx-auto w-auto max-w-2xl">
+                            <div
+                                class="bg-white w-full rounded shadow-2xl p-5 flex flex-col"
+                            >
+                                <div
+                                    class="text-2xl font-bold mb-10 mt-5 flex justify-between"
+                                >
+                                    <span>Register Your Business</span>
+                                    <button
+                                        class="font-bold text-2xl text-white bg-red-500 px-4 rounded-md"
+                                        @click="toggleModal = false"
+                                    >
+                                        x
+                                    </button>
+                                </div>
+                                <div class="md:flex gap-3">
+                                    <div class="flex flex-col">
+                                        <span>Name</span>
+                                        <input class="rounded" type="text">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span>Email</span>
+                                        <input class="rounded" type="text">
+                                    </div>
+                                </div>
+                                <div class="flex gap-2 justify-end mt-7">
+                                    <button
+                                        class="rounded bg-red-500 text-white px-6 mt-1 py-2"
+                                        @click="toggleModal = false"
+                                    >
+                                        close
+                                    </button>
+                                    <button
+                                        class="rounded bg-green-800 text-white px-6 mt-1 py-2"
+                                        @click="toggleModal = false"
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div
+                        v-if="toggleModal"
+                        class="absolute inset-0 z-40 opacity-25 bg-black"
+                    ></div> -->
                 </div>
             </div>
         </div>
@@ -407,3 +465,15 @@ defineProps({
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: "modal",
+    data() {
+        return {
+            toggleModal: false,
+        };
+    },
+    method: {},
+};
+</script>
