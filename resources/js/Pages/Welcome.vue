@@ -403,15 +403,15 @@ defineProps({
                         Become a Supplier
                     </button>
                     <div
-                        class="fixed overflow-x-hidden overflow-y-auto inset-0 flex justify-center items-center z-50"
+                        class="fixed overflow-y-auto pt-20 bg-black/[0.6] inset-0 flex justify-center items-center z-50"
                         v-if="toggleModal"
                     >
                         <div class="relative mx-auto w-auto max-w-2xl">
                             <div
-                                class="bg-white w-full rounded shadow-2xl p-5 flex flex-col"
+                                class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col"
                             >
                                 <div
-                                    class="text-2xl font-bold mb-10 mt-5 flex justify-between"
+                                    class="text-2xl font-bold mb-5 mt-1 flex justify-between"
                                 >
                                     <span>Register Your Business</span>
                                     <button
@@ -424,54 +424,64 @@ defineProps({
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
                                         <span>Name</span>
-                                        <input class="rounded" type="text">
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                     <div class="flex flex-col">
                                         <span>Email</span>
-                                        <input class="rounded" type="text">
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
-                                        <span>Name</span>
-                                        <input class="rounded" type="text">
+                                        <span>Gender</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                     <div class="flex flex-col">
-                                        <span>Email</span>
-                                        <input class="rounded" type="text">
+                                        <span>Location</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
-                                        <span>Name</span>
-                                        <input class="rounded" type="text">
+                                        <span>Region</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                     <div class="flex flex-col">
-                                        <span>Email</span>
-                                        <input class="rounded" type="text">
+                                        <span>Phone</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
-                                        <span>Name</span>
-                                        <input class="rounded" type="text">
+                                        <span>Photo</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                     <div class="flex flex-col">
-                                        <span>Email</span>
-                                        <input class="rounded" type="text">
+                                        <span>Category</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                 </div>
                                 <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
-                                        <span>Name</span>
-                                        <input class="rounded" type="text">
+                                        <span>Sub category</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                     <div class="flex flex-col">
-                                        <span>Email</span>
-                                        <input class="rounded" type="text">
+                                        <span>Boost</span>
+                                        <input class="h-8 rounded" type="text">
                                     </div>
                                 </div>
-                                <div class="flex gap-2 justify-end mt-7">
+                                <div class="md:flex gap-3 mb-5">
+                                    <div class="flex flex-col">
+                                        <span>Comment</span>
+                                        <input class="h-8 rounded" type="text">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span>Annual Turnover</span>
+                                        <input class="h-8 rounded" type="text">
+                                    </div>
+                                </div>
+                                <div class="flex gap-2 justify-end mt-1">
                                     <button
                                         class="rounded bg-red-500 text-white px-6 mt-1 py-2"
                                         @click="toggleModal = false"
