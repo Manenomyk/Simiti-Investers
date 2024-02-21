@@ -421,7 +421,17 @@ defineProps({
                                         x
                                     </button>
                                 </div>
-                                <div class="md:flex gap-3">
+                                <div class="md:flex gap-3 mb-5">
+                                    <div class="flex flex-col">
+                                        <span>Name</span>
+                                        <input class="rounded" type="text">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span>Email</span>
+                                        <input class="rounded" type="text">
+                                    </div>
+                                </div>
+                                <div class="md:flex gap-3 mb-5">
                                     <div class="flex flex-col">
                                         <span>Name</span>
                                         <input class="rounded" type="text">
