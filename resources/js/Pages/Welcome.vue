@@ -14,6 +14,7 @@ defineProps({
 
 <template>
     <Head title="Welcome" />
+    <div>
     <div class="">
         <div class="w-screen justify-item-center">
             <div class="fixed z-20 top-0 left-0 bg-white w-full shadow-md">
@@ -584,22 +585,22 @@ defineProps({
                             </div>
                         </div>
                     </div>
-                    <!-- <div
-                        v-if="toggleModal"
-                        class="absolute inset-0 z-40 opacity-25 bg-black"
-                    ></div> -->
+                    
                 </div>
             </div>
+            
         </div>
 
-        <div class="bg-black w-full">
+        
+    </div>
+    <!-- <div class="absolute top-[100%] text-white bg-black w-full">
             <div class="flex">
                 <p>logo</p>
                 <p>Simiti company</p>
             </div>
             <div class="my-4"></div>
-        </div>
-    </div>
+        </div> -->
+</div>
 </template>
 
 <script>
