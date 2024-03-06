@@ -18,6 +18,7 @@ class PendingSuppliersResource extends Resource
     protected static ?string $model = PendingSuppliers::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationGroup = 'Supplier Management';
 
     public static function form(Form $form): Form
     {
