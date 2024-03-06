@@ -18,6 +18,7 @@ class ReviewsResource extends Resource
     protected static ?string $model = Reviews::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationGroup = 'Statistics management';
 
     public static function form(Form $form): Form
     {
