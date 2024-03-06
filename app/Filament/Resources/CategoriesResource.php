@@ -25,8 +25,14 @@ class CategoriesResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('categories-name')->required(),
+                Forms\Components\Section::make('')
+                ->description('Enter Category details')
+                ->schema([
+                    Forms\Components\TextInput::make('categories-name')->required(),
                 Forms\Components\TextInput::make('sub-categories')->nullable(),
+                ])->columns(2),
+
+                
             ]);
     }
 
