@@ -33,3 +33,20 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::get('/Analytics', function(){
+    return Inertia::render('Analytics');
+});
+
+Route::get('/Portfolio', function(){
+    return Inertia::render('Portfolio');
+});
+Route::get('/Insurers', function(){
+    return Inertia::render('Insurers');
+});
+Route::get('/Review', function(){
+    return Inertia::render('Review');
+});
+Route::get('/ServicePro', function(){
+    return Inertia::render('ServicePro');
+});
