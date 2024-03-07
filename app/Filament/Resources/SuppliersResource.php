@@ -27,36 +27,58 @@ class SuppliersResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')->required(),
-                Forms\Components\TextInput::make('email')->email()->required(),
-                Forms\Components\TextInput::make('location')->required(),
-                Forms\Components\TextInput::make('region')->required(),
-                Forms\Components\TextInput::make('phone')->required(),
-                Select::make('category')->required()
-                ->options([
-                     'Heavy machines',
-                   'Drillings',
-                    'Borehole',
-                ]),
-                Select::make('sub-category')->required()
-                ->options([
-                     'Heavy machines',
-                   'Drillings',
-                    'Borehole',
-                ]),
-                Forms\Components\TextInput::make('annual-turnover')->required(),
-                FileUpload::make('photo'),
+                Forms\Components\Section::make('')
+                ->description('Enter Supplier Details')
+                ->schema([
+                    Forms\Components\TextInput::make('name')->required(),
+                    Forms\Components\TextInput::make('email')->email()->required(),
+                    Forms\Components\TextInput::make('phone')->required(),
+                
                 Forms\Components\TextInput::make('comment')->required(),
                 Radio::make('gender')->required()
                 ->options([
-                    'Male',
-                    'Female',
+                    'Male' => 'Male',
+                    'Female' => 'Female',
                 ]),
+                ])->columns(3),
+
+                Forms\Components\Section::make('')
+                ->description('Suspplier Location Details')
+                ->schema([
+                    Forms\Components\TextInput::make('location')->required(),
+                    Forms\Components\TextInput::make('region')->required(),
+                ])->columns(2),
+
+
+                Forms\Components\Section::make('')
+                ->description('Category Details')
+                ->schema([
+                    Select::make('category')->required()
+                    ->options([
+                         'Heavy machines' => 'Heavy machines',
+                       'Drillings' => 'Drillings',
+                        'Borehole' => 'Borehole',
+                    ]),
+                    Select::make('sub-category')->required()
+                    ->options([
+                         'Heavy machines' => 'Heavy machines',
+                       'Drillings' => 'Drillings',
+                        'Borehole' => 'Borehole',
+                    ]),
+                ])->columns(2),
+
+                Forms\Components\Section::make('')
+                ->description('Supplier Uploads')
+                ->schema([
+                    FileUpload::make('photo'),
+                    Forms\Components\TextInput::make('annual-turnover')->required(),
                 Radio::make('boost')->required()
                 ->options([
-                    'Yes',
-                    'No',
+                    'Yes' => 'Yes',
+                    'No' => 'No',
                 ]),
+                ])->columns(3),
+                
 
             ]);
     }
