@@ -1,6 +1,6 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
-import Welcome from "@/Components/Welcome.vue";
+import { HomeIcon } from '@heroicons/vue/24/solid'
 </script>
 
 <template>
@@ -11,13 +11,17 @@ import Welcome from "@/Components/Welcome.vue";
         </template> -->
             <div class="flex min-h-screen">
                 <div class="w-48 bg-green-200 border-green-200">
-                    <div class="py-4 px-2">
+                    <div class="py-4">
                         <div class="mb-10">
                             <h3
-                                class="mx-6 mb-2 text-gray-500 uppercase tracking-widest"
+                                class="mx-6 mb-2 text-gray-500  tracking-widest"
                             >
-                                main
+                                Main Tab
                             </h3>
+                            <a href="/" class="flex items-center px-12 py-2.5 text-gray-500 hover:text-orange-400 group">
+                                <HomeIcon class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"/>
+                            Home
+                            </a>
                         </div>
                     </div>
                 </div>
