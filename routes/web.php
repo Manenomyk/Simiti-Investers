@@ -47,6 +47,6 @@ Route::get('/Insurers', function(){
 Route::get('/Review', function(){
     return Inertia::render('Review');
 });
-Route::get('/ServicePro', function(){
-    return Inertia::render('ServicePro');
+Route::get('/ServiceProviders', function(){
+    return Inertia::render('ServiceProviders');
 });
