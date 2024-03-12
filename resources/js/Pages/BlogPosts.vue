@@ -27,7 +27,7 @@ defineProps({
                         >
                             <a href="/">
                                 <li
-                                class="bg-green-800 rounded-lg text-white py-2 px-6"
+                                class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                             >
                                 Home
                             </li>
@@ -80,7 +80,7 @@ defineProps({
                             </li>
                             <a href="BlogPosts">
                                 <li
-                                class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
+                                class="bg-green-800 rounded-lg text-white py-2 px-6 mr-5"
                             >
                                 Blogs
                             </li>
