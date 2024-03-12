@@ -50,3 +50,6 @@ Route::get('/Review', function(){
 Route::get('/ServiceProviders', function(){
     return Inertia::render('ServiceProviders');
 });
+Route::get('/Register Business', function(){
+    return Inertia::render('RegisterBusiness');
+});
