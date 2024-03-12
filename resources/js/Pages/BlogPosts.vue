@@ -86,34 +86,7 @@ defineProps({
                             </li>
                             </a>
 
-                            <li>
-                                <div
-                                    v-if="canLogin"
-                                    class="sm:top-0 sm:end-0 p-6 text-end z-10"
-                                >
-                                    <Link
-                                        v-if="$page.props.auth.user"
-                                        :href="route('dashboard')"
-                                        class="font-boldbold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-100"
-                                        >Dashboard</Link
-                                    >
-
-                                    <template v-else>
-                                        <Link
-                                            :href="route('login')"
-                                            class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6 font-bold text-black hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-100"
-                                            >Log in</Link
-                                        >
-
-                                        <Link
-                                            v-if="canRegister"
-                                            :href="route('register')"
-                                            class="ms-4 font-bold hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6 text-black hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-100"
-                                            >Register</Link
-                                        >
-                                    </template>
-                                </div>
-                            </li>
+                            
                         </ul>
                         <button
                             class="block md:hidden py-3 px-3 mx-2 rounded focus:outline-none hover:bg-gray-200 group"
