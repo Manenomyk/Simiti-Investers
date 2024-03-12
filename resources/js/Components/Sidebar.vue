@@ -19,6 +19,15 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                                 Home
                             </a>
                             <a
+                                href="/RegisterBusiness"
+                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                            >
+                                <HomeIcon
+                                    class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
+                                />
+                                Business
+                            </a>
+                            <a
                                 href="/Portfolio"
                                 class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
@@ -27,6 +36,7 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                                 />
                                 Portfolio
                             </a>
+
                             <a
                                 href="/Review"
                                 class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
