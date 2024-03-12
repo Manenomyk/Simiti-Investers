@@ -56,3 +56,6 @@ Route::get('/RegisterBusiness', function(){
 Route::get('/Blogs', function(){
     return Inertia::render('Blogs');
 });
+Route::get('/BlogPosts', function(){
+    return Inertia::render('BlogPosts');
+});
