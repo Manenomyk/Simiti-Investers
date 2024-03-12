@@ -53,3 +53,6 @@ Route::get('/ServiceProviders', function(){
 Route::get('/RegisterBusiness', function(){
     return Inertia::render('RegisterBusiness');
 });
+Route::get('/Blogs', function(){
+    return Inertia::render('Blogs');
+});

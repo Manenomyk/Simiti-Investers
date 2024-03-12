@@ -73,6 +73,15 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                                 />
                                 Service
                             </a>
+                            <a
+                                href="/Blogs"
+                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                            >
+                                <HomeIcon
+                                    class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
+                                />
+                                Blogs
+                            </a>
                         </div>
                     </div>
                 </div>
