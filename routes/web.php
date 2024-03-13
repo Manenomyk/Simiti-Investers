@@ -37,6 +37,9 @@ Route::middleware([
 });
 
 
+Route::get('/Categories', function(){
+    return Inertia::render('Categories');
+});
 
 Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');

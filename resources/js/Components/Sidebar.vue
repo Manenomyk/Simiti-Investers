@@ -47,6 +47,15 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                                 Review
                             </a>
                             <a
+                                href="/Categories"
+                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                            >
+                                <HomeIcon
+                                    class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
+                                />
+                                Categories
+                            </a>
+                            <a
                                 href="/Analytics"
                                 class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
