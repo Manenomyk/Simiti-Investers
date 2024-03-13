@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Analytics extends Model
 {
     use HasFactory;
+
+    public $fillable = [
+        'gender',
+        'region',
+        'location',
+        'rating',
+        'category',
+        'subcategory',
+
+    ];
 }

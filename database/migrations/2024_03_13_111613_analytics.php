@@ -11,7 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('Analytics', function(Blueprint $table){
+            $table->id();
+            $table->string('gender');
+            $table->string('region');
+            $table->string('location');
+            $table->string('rating');
+            $table->string('category');
+            $table->string('subcategory');
+            $table->timestamps();
+
+        });
     }
 
     /**
