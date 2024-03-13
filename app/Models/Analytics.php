@@ -15,7 +15,7 @@ class Analytics extends Model
         'location',
         'rating',
         'category',
-        'subcategory',
+        'sub_category',
 
     ];
 }

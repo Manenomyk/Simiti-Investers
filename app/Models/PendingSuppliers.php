@@ -18,8 +18,8 @@ class PendingSuppliers extends Model
         'photo',
         'phone',
         'category',
-        'sub-category',
-        'annual-turnover',
+        'sub_category',
+        'annual_turnover',
         'boost',
         'comment',
     ];

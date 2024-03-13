@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('phone');
             $table->string('photo')->nullable();
             $table->string('category');
-            $table->string('sub-category');
-            $table->string('annual-turnover');
+            $table->string('sub_category');
+            $table->string('annual_turnover');
             $table->string('boost');
             $table->string('comment');
             $table->timestamps();

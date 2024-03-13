@@ -94,7 +94,7 @@ class SuppliersResource extends Resource
                 Tables\Columns\TextColumn::make('region'),
                 Tables\Columns\TextColumn::make('gender'),
                 Tables\Columns\TextColumn::make('category'),
-                Tables\Columns\TextColumn::make('annual-turnover'),
+                Tables\Columns\TextColumn::make('annual_turnover'),
 
                 
             ])

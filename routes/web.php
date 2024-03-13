@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\CategoriesController;
+use App\Models\Categories;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -33,13 +35,16 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
-    Route::post('/Analytics', [BusinessController::class, 'store'])->name('analytics.store');
+    Route::get('/Categories', [CategoriesController::class, 'index'])->name('catego.index');
+    
+    // Route::get('/Categories', function(){
+    //     $data = Categories::all();
+    //     return Inertia::render('Categories', compact('data'));
+    // });
 });
 
 
-Route::get('/Categories', function(){
-    return Inertia::render('Categories');
-});
+
 
 Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');
