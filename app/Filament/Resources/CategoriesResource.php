@@ -28,8 +28,8 @@ class CategoriesResource extends Resource
                 Forms\Components\Section::make('')
                 ->description('Enter Category details')
                 ->schema([
-                    Forms\Components\TextInput::make('categories-name')->required(),
-                Forms\Components\TextInput::make('sub-categories')->nullable(),
+                    Forms\Components\TextInput::make('categories_name')->required(),
+                Forms\Components\TextInput::make('sub_categories')->nullable(),
                 ])->columns(2),
 
                 
@@ -40,8 +40,8 @@ class CategoriesResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('categories-name'),
-                Tables\Columns\TextColumn::make('sub-categories'),
+                Tables\Columns\TextColumn::make('categories_name'),
+                Tables\Columns\TextColumn::make('sub_categories'),
             ])
             ->filters([
                 //

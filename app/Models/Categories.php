@@ -10,8 +10,8 @@ class Categories extends Model
     use HasFactory;
 
     public $fillable = [
-        'categories-name',
-        'sub-categories',
+        'categories_name',
+        'sub_categories',
 
     ];
 }
