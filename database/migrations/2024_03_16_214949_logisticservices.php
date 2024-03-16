@@ -11,7 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('Logistic_Services', function(Blueprint $table){
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('gender');
+            $table->string('location');
+            $table->string('region');
+            $table->string('phone');
+            $table->string('photo')->nullable();
+            $table->string('category');
+            $table->string('sub_category');
+            $table->string('annual_turnover');
+            $table->string('boost');
+            $table->string('comment');
+            $table->timestamps();
+
+        });
     }
 
     /**
