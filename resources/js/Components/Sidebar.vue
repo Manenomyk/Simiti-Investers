@@ -6,12 +6,12 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
     <div class="w-48 bg-[#1F2937] border-green-200">
                     <div class="py-4">
                         <div class="mb-10">
-                            <h3 class="mx-6 mb-2 text-gray-500 tracking-widest">
+                            <h3 class="mx-2 mb-2 text-gray-500 tracking-widest">
                                 Main Tab
                             </h3>
                             <a
                                 href="/dashboard"
-                                class="flex items-center px-6 py-2.5 text-white hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-white hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-white mr-2 group-hover:text-orange-600"
@@ -20,16 +20,16 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                             </a>
                             <a
                                 href="/RegisterBusiness"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                                 />
-                                Business
+                                Register Business
                             </a>
                             <a
                                 href="/Portfolio"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
@@ -39,7 +39,7 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
 
                             <a
                                 href="/Review"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
@@ -48,7 +48,7 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                             </a>
                             <a
                                 href="/Categories"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
@@ -57,7 +57,7 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                             </a>
                             <a
                                 href="/Analytics"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
@@ -66,25 +66,25 @@ import { HomeIcon } from "@heroicons/vue/24/solid";
                             </a>
                             <a
                                 href="/Insurers"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                                 />
-                                Insurers
+                                Insurance Providers
                             </a>
                             <a
                                 href="/ServiceProviders"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                                 />
-                                Service
+                                Logistic Providers
                             </a>
                             <a
                                 href="/Blogs"
-                                class="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-400 group"
+                                class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                             >
                                 <HomeIcon
                                     class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
