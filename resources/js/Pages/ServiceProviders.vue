@@ -4,6 +4,11 @@ import Sidebar from "../Components/Sidebar.vue";
 export default {
 components: {Sidebar, AppLayout }
 }
+
+defineProps({
+    data: Object,
+})
+
 </script>
 
 <template>
@@ -12,6 +17,90 @@ components: {Sidebar, AppLayout }
         <div class="flex min-h-screen">
             <Sidebar />
         </div>
+
+
+        <div class="w-full p-6 bg-white rounded-lg shadow-xl">
+                    <div class="w-full p-6 bg-white rounded-lg shadow-xl">
+                        <table
+                            class="min-w-full border border-spacing-y-2 border-spacing-x-2 border-gray-300 rounded-sm"
+                        >
+                            <caption class="caption-bottom text-[11px] mb-2">
+                                List of Logistic Service Providers
+                            </caption>
+                            <thead
+                                class="sm:table-header-group hidden border-b border-gray-300"
+                            >
+                                <tr>
+                                    <th
+                                        class="whitespace-normal py-4 text-sm font-semibold sm:px-6"
+                                    >
+                                        Photo
+                                    </th>
+                                    <th
+                                        class="whitespace-normal py-4 text-sm font-semibold sm:px-6"
+                                    >
+                                        Name
+                                    </th>
+                                    <th
+                                        class="whitespace-normal py-4 text-sm font-semibold sm:px-6"
+                                    >
+                                    Email
+                                    </th>
+                                    <th
+                                        class="whitespace-normal py-4 text-sm font-semibold sm:px-6"
+                                    >
+                                    Location
+                                    </th>
+                                    <th
+                                        class="whitespace-normal py-4 text-sm font-semibold sm:px-6"
+                                    >
+                                    Region
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr
+                                    v-for="item in data"
+                                    :key="item.id"
+                                    class="text-sm border border-slate-200 flex flex-col mb-6 py-1 divide-y divide-y-slate-50 sm:border-0 sm:table-row sm:mb-0 sm:py-0 sm:divide-none"
+                                >
+                                    <td
+                                        class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
+                                        data-label="Farm Name"
+                                    >
+                                        {{ item.photo }}
+                                    </td>
+                                    <td
+                                        class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
+                                        data-label="Farm Name"
+                                    >
+                                        {{ item.name }}
+                                    </td>
+                                    <td
+                                        class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
+                                        data-label="Farm Name"
+                                    >
+                                        {{ item.email }}
+                                    </td>
+                                    <td
+                                        class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
+                                        data-label="Farm Name"
+                                    >
+                                        {{ item.location }}
+                                    </td>
+                                    <td
+                                        class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
+                                        data-label="Farm Name"
+                                    >
+                                        {{ item.region }}
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
     </AppLayout>
   </div>
 </template>
