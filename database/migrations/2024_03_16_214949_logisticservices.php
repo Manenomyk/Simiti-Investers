@@ -20,10 +20,6 @@ return new class extends Migration
             $table->string('region');
             $table->string('phone');
             $table->string('photo')->nullable();
-            $table->string('category');
-            $table->string('sub_category');
-            $table->string('annual_turnover');
-            $table->string('boost');
             $table->string('comment');
             $table->timestamps();
 

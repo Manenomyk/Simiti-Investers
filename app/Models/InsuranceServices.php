@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class InsuranceServices extends Model
 {
     use HasFactory;
-    
+
     public $fillable = [
         'name',
         'email',
@@ -17,10 +17,6 @@ class InsuranceServices extends Model
         'region',
         'photo',
         'phone',
-        'category',
-        'sub_category',
-        'annual_turnover',
-        'boost',
         'comment',
     ];
 }

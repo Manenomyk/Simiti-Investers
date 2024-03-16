@@ -17,10 +17,6 @@ class LogisticServices extends Model
         'region',
         'photo',
         'phone',
-        'category',
-        'sub_category',
-        'annual_turnover',
-        'boost',
         'comment',
     ];
 }
