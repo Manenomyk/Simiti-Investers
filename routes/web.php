@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\BusinessController;
-use App\Http\Controllers\CategoriesController;
-use App\Models\Categories;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Categories;
+use App\Models\LogisticServices;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\LogisticsController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,7 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/Categories', [CategoriesController::class, 'index'])->name('catego.index');
     
+    Route::get('/ServiceProviders', [LogisticsController::class, 'index'])->name('logi.index');
     // Route::get('/Categories', function(){
     //     $data = Categories::all();
     //     return Inertia::render('Categories', compact('data'));
@@ -55,9 +58,10 @@ Route::get('/Insurers', function(){
 Route::get('/Review', function(){
     return Inertia::render('Review');
 });
-Route::get('/ServiceProviders', function(){
-    return Inertia::render('ServiceProviders');
-});
+
+// Route::get('/ServiceProviders', function(){
+//     return Inertia::render('ServiceProviders');
+// });
 
 
 // Route::post('/RegisterBusiness', function(){

@@ -10,6 +10,6 @@ class LogisticsController extends Controller
 {
     public function index( ){
         $data = LogisticServices::all();
-        return Inertia::render('Categories', compact('data'));
+        return Inertia::render('ServiceProviders', compact('data'));
     }
 }
