@@ -10,6 +10,6 @@ class InsurerController extends Controller
 {
     public function index( ){
         $data = InsuranceServices::all();
-        return Inertia::render('Categories', compact('data'));
+        return Inertia::render('Insurers', compact('data'));
     }
 }

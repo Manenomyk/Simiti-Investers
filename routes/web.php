@@ -8,6 +8,7 @@ use Illuminate\Foundation\Application;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\InsurerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,8 @@ Route::middleware([
     Route::get('/Categories', [CategoriesController::class, 'index'])->name('catego.index');
     
     Route::get('/ServiceProviders', [LogisticsController::class, 'index'])->name('logi.index');
+
+    Route::get('/Insurers', [InsurerController::class, 'index'])->name('insure.index');
     // Route::get('/Categories', function(){
     //     $data = Categories::all();
     //     return Inertia::render('Categories', compact('data'));
@@ -47,14 +50,13 @@ Route::middleware([
 });
 
 
-
-
 Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');
 });
-Route::get('/Insurers', function(){
-    return Inertia::render('Insurers');
-});
+
+// Route::get('/Insurers', function(){
+//     return Inertia::render('Insurers');
+// });
 Route::get('/Review', function(){
     return Inertia::render('Review');
 });
