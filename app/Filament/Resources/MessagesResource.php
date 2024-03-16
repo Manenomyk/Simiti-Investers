@@ -31,7 +31,10 @@ class MessagesResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('user_name'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('message'),
             ])
             ->filters([
                 //
