@@ -1,9 +1,6 @@
-<script>
+<script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../Components/Sidebar.vue";
-export default {
-    components: { Sidebar, AppLayout },
-};
 
 defineProps({
     data: Object,
@@ -13,7 +10,8 @@ defineProps({
 <template>
     <div>
         <AppLayout title="Dashboard" class="flex-1">
-            <div class="flex min-h-screen">
+          <div class="flex">
+            <div class="min-full">
                 <Sidebar />
             </div>
 
@@ -97,6 +95,7 @@ defineProps({
                     </table>
                 </div>
             </div>
+          </div>
         </AppLayout>
     </div>
 </template>
