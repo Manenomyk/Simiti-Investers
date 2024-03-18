@@ -43,12 +43,14 @@ Route::middleware([
     Route::get('/ServiceProviders', [LogisticsController::class, 'index'])->name('logi.index');
 
     Route::get('/Insurers', [InsurerController::class, 'index'])->name('insure.index');
+
+    Route::get('/Suppliers', [BusinessController::class, 'store'])->name('supp.store');
     // Route::get('/Categories', function(){
     //     $data = Categories::all();
     //     return Inertia::render('Categories', compact('data'));
     // });
 
-    
+
 });
 
 
