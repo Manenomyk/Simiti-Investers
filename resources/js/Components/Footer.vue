@@ -4,20 +4,20 @@
         className="max-w-[1240px] mx-auto py-10 grid md:grid-cols-3 gap-8 text-gray-300"
     >
         <div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 ">
                 <a href="/"
                     ><img
-                        src="{logo}"
+                        src="../../Assets/log.png"
                         alt="/"
-                        className="w-20 rounded-full mx-2"
+                        className="w-20 rounded-[50%] shadow-lg mx-2"
                 /></a>
-                <h1 className="w-full text-3xl font-bold text-[#00df9a]">
-                    SIMITI
+                <h1 className="w-full text-2xl mt-4 font-bold text-green-800">
+                    Simiti Constructors
                 </h1>
             </div>
-            <p className="my-4">
-                Navigating Finances, Ensuring Compliance: Your Success, Our
-                Assurance Optimal Audit Advisors at Your Service!
+            <p className="my-4 text-black">
+                Unlock Your Next Building Venture: Explore Listings from Leading
+                Contractors
             </p>
             <form className="mt-9">
                 <input
