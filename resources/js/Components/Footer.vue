@@ -44,14 +44,14 @@
                 <input
                     type="submit"
                     value="Send Message"
-                    className="bg-[#e4c131] w-[180px] rounded-md  my-3  p-2 text-black font-bold focus:ring-1"
+                    className="bg-yellow-500 w-[180px] rounded-md  my-3  p-2 text-black font-bold focus:ring-1"
                 />
             </form>
         </div>
 
         <div className="mx-2 md:col-span-2 flex justify-between mt-5">
             <div>
-                <h2 className="text-yellow-400 font-bold text-2xl mb-4">Services</h2>
+                <h2 className="text-yellow-500 font-bold text-2xl mb-4">Services</h2>
                 <ul>
                     
                         <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
@@ -72,13 +72,16 @@
                         <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
                             Access to Quality
                         </li>
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
+                            Upto date Blogs
+                        </li>
                     
                     
                 </ul>
             </div>
 
             <div>
-                <h2 className="text-yellow-400 mb-4 font-bold text-2xl">
+                <h2 className="text-yellow-500 mb-4 font-bold text-2xl">
                     Quick Access
                 </h2>
                 <ul>
