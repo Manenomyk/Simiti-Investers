@@ -25,13 +25,13 @@ defineProps({
                         <ul
                             class="hidden md:flex items-center text-base font-semibold cursor-pointer"
                         >
-                           <a href="/">
-                            <li
-                                class="bg-green-800 rounded-lg text-white py-2 px-6"
-                            >
-                                Home
-                            </li>
-                           </a>
+                            <a href="/">
+                                <li
+                                    class="bg-green-800 rounded-lg text-white py-2 px-6"
+                                >
+                                    Home
+                                </li>
+                            </a>
                             <li
                                 class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                             >
@@ -80,10 +80,10 @@ defineProps({
                             </li>
                             <a href="BlogPosts">
                                 <li
-                                class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
-                            >
-                                Blogs
-                            </li>
+                                    class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
+                                >
+                                    Blogs
+                                </li>
                             </a>
 
                             <li>
@@ -372,224 +372,232 @@ defineProps({
                     />
                 </div>
             </div>
-
-            <div class="absolute w-full h-[80vh]">
-                <video
-                    src="../../Assets/Towers.mp4"
-                    class="w-[100%] h-[100%] object-cover"
-                    autoplay
-                    muted
-                    loop
-                />
-                <div
-                    class="absolute top-0 left-0 h-full w-full bg-black/[0.6]"
-                ></div>
-                <div class="m-4 absolute top-10">
-                    <p class="text-yellow-400 md:text-5xl font-bold text-3xl">
-                        Make that dream a reality
-                    </p>
-                    <p class="text-green-800 md:text-2xl font-bold">
-                        Build you future with us
-                    </p>
-                    <p class="mt-5 text-white grid md:grid-cols-3">
-                        Elevate your projects with exclusive access to top-tier
-                        building suppliers. Unlock efficiency and quality like
-                        never before. Transform your builds with premium
-                        materials and expert craftsmanship. Take the next step
-                        towards excellence today!"
-                    </p>
-                    <div class="flex md:gap-5">
-                        <button
-                            className="bg-yellow-400 hover:bg-yellow-300 w-[200px] rounded-md  my-6 mx-auto md:mx-0 p-2 text-black font-bold"
+            <div class="relative h-[80vh] bg-black">
+                <div class="absolute w-full h-[80vh]">
+                    <video
+                        src="../../Assets/Towers.mp4"
+                        class="w-[100%] h-[100%] object-cover"
+                        autoplay
+                        muted
+                        loop
+                    />
+                    <div
+                        class="absolute top-0 left-0 h-full w-full bg-black/[0.6]"
+                    ></div>
+                    <div class="m-4 absolute top-10">
+                        <p
+                            class="text-yellow-400 md:text-5xl font-bold text-3xl"
                         >
-                            Search Suppliers
-                        </button>
-                        <button
-                            type="reset"
-                            @click="toggleModal = !toggleModal"
-                            className="bg-green-900 text-white hover:bg-green-800 w-[200px] rounded-md  my-6 mx-auto md:mx-0 p-2 text-black font-bold"
-                        >
-                            Become a Supplier
-                        </button>
-                        <div
-                            class="fixed overflow-y-auto pt-[100%] md:pt-20 bg-black/[0.6] inset-0 flex justify-center items-center z-50"
-                            v-if="toggleModal"
-                        >
-                            <div class="relative mx-auto w-auto max-w-2xl">
-                                <div
-                                    class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col"
-                                >
+                            Make that dream a reality
+                        </p>
+                        <p class="text-green-800 md:text-2xl font-bold">
+                            Build you future with us
+                        </p>
+                        <p class="mt-5 text-white grid md:grid-cols-3">
+                            Elevate your projects with exclusive access to
+                            top-tier building suppliers. Unlock efficiency and
+                            quality like never before. Transform your builds
+                            with premium materials and expert craftsmanship.
+                            Take the next step towards excellence today!"
+                        </p>
+                        <div class="flex md:gap-5">
+                            <button
+                                className="bg-yellow-400 hover:bg-yellow-300 w-[200px] rounded-md  my-6 mx-auto md:mx-0 p-2 text-black font-bold"
+                            >
+                                Search Suppliers
+                            </button>
+                            <button
+                                type="reset"
+                                @click="toggleModal = !toggleModal"
+                                className="bg-green-900 text-white hover:bg-green-800 w-[200px] rounded-md  my-6 mx-auto md:mx-0 p-2 text-black font-bold"
+                            >
+                                Become a Supplier
+                            </button>
+                            <div
+                                class="fixed overflow-y-auto pt-[100%] md:pt-20 bg-black/[0.6] inset-0 flex justify-center items-center z-50"
+                                v-if="toggleModal"
+                            >
+                                <div class="relative mx-auto w-auto max-w-2xl">
                                     <div
-                                        class="text-2xl font-bold mb-5 pt-4 flex justify-between"
+                                        class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col"
                                     >
-                                        <span>Register Your Business</span>
-                                        <button
-                                            class="font-bold text-2xl text-white bg-red-500 px-4 rounded-md"
-                                            @click="toggleModal = false"
+                                        <div
+                                            class="text-2xl font-bold mb-5 pt-4 flex justify-between"
                                         >
-                                            x
-                                        </button>
-                                    </div>
-                                    <div class="md:flex gap-3 mb-5">
-                                        <div class="flex flex-col">
-                                            <span>Name</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <span>Email</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="md:flex gap-3 mb-5">
-                                        <div class="flex flex-col">
-                                            <span>Gender</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <span>Location</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="md:flex gap-3 mb-5">
-                                        <div class="flex flex-col">
-                                            <span>Region</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <span>Phone</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="md:flex gap-3 mb-5">
-                                        <div class="flex flex-col">
-                                            <span>Photo</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <span>Annual Turnover</span>
-                                            <input
-                                                class="h-8 rounded"
-                                                type="text"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="md:flex gap-3 mb-5">
-                                        <div class="flex flex-col">
-                                            <span>Category</span>
-                                            <select
-                                                name="Category"
-                                                class="h-8 rounded"
-                                                id="Category"
+                                            <span>Register Your Business</span>
+                                            <button
+                                                class="font-bold text-2xl text-white bg-red-500 px-4 rounded-md"
+                                                @click="toggleModal = false"
                                             >
-                                                <option value="volvo">
-                                                    Select Category
-                                                </option>
-                                                <option value="saab">
-                                                    Heavy Machine
-                                                </option>
-                                                <option value="mercedes">
-                                                    Drilling
-                                                </option>
-                                                <option value="audi">
-                                                    Borehole
-                                                </option>
-                                            </select>
+                                                x
+                                            </button>
                                         </div>
-                                        <div class="flex flex-col">
-                                            <span>Sub-Category</span>
-                                            <select
-                                                name="Category"
-                                                class="h-8 rounded"
-                                                id="Category"
-                                            >
-                                                <option value="volvo">
-                                                    Select Category
-                                                </option>
-                                                <option value="saab">
-                                                    Heavy Machine
-                                                </option>
-                                                <option value="mercedes">
-                                                    Drilling
-                                                </option>
-                                                <option value="audi">
-                                                    Borehole
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="md:flex gap-3 mb-5">
-                                        <div class="flex flex-col">
-                                            <span>Comment</span>
-                                            <textarea
-                                                class="rounded"
-                                                id="w3review"
-                                                name="w3review"
-                                                rows="4"
-                                            >
-                                            </textarea>
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <span>Boost</span>
+                                        <div class="md:flex gap-3 mb-5">
                                             <div class="flex flex-col">
-                                                <form>
-                                                     
-                                                    <input
-                                                        type="radio"
-                                                        id="html"
-                                                        name="fav_language"
-                                                        value="HTML"
-                                                    />
-                                                     
-                                                    <label for="html">Yes</label
-                                                    ><br />
-                                                     
-                                                    <input
-                                                        type="radio"
-                                                        id="css"
-                                                        name="fav_language"
-                                                        value="CSS"
-                                                    />
-                                                     
-                                                    <label for="css">No</label>
-                                                     
-                                                </form>
+                                                <span>Name</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span>Email</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="flex gap-2 justify-end mt-1">
-                                        <button
-                                            class="rounded bg-red-500 text-white px-6 mt-1 py-2"
-                                            @click="toggleModal = false"
+                                        <div class="md:flex gap-3 mb-5">
+                                            <div class="flex flex-col">
+                                                <span>Gender</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span>Location</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="md:flex gap-3 mb-5">
+                                            <div class="flex flex-col">
+                                                <span>Region</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span>Phone</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="md:flex gap-3 mb-5">
+                                            <div class="flex flex-col">
+                                                <span>Photo</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span>Annual Turnover</span>
+                                                <input
+                                                    class="h-8 rounded"
+                                                    type="text"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="md:flex gap-3 mb-5">
+                                            <div class="flex flex-col">
+                                                <span>Category</span>
+                                                <select
+                                                    name="Category"
+                                                    class="h-8 rounded"
+                                                    id="Category"
+                                                >
+                                                    <option value="volvo">
+                                                        Select Category
+                                                    </option>
+                                                    <option value="saab">
+                                                        Heavy Machine
+                                                    </option>
+                                                    <option value="mercedes">
+                                                        Drilling
+                                                    </option>
+                                                    <option value="audi">
+                                                        Borehole
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span>Sub-Category</span>
+                                                <select
+                                                    name="Category"
+                                                    class="h-8 rounded"
+                                                    id="Category"
+                                                >
+                                                    <option value="volvo">
+                                                        Select Category
+                                                    </option>
+                                                    <option value="saab">
+                                                        Heavy Machine
+                                                    </option>
+                                                    <option value="mercedes">
+                                                        Drilling
+                                                    </option>
+                                                    <option value="audi">
+                                                        Borehole
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="md:flex gap-3 mb-5">
+                                            <div class="flex flex-col">
+                                                <span>Comment</span>
+                                                <textarea
+                                                    class="rounded"
+                                                    id="w3review"
+                                                    name="w3review"
+                                                    rows="4"
+                                                >
+                                                </textarea>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span>Boost</span>
+                                                <div class="flex flex-col">
+                                                    <form>
+                                                         
+                                                        <input
+                                                            type="radio"
+                                                            id="html"
+                                                            name="fav_language"
+                                                            value="HTML"
+                                                        />
+                                                         
+                                                        <label for="html"
+                                                            >Yes</label
+                                                        ><br />
+                                                         
+                                                        <input
+                                                            type="radio"
+                                                            id="css"
+                                                            name="fav_language"
+                                                            value="CSS"
+                                                        />
+                                                         
+                                                        <label for="css"
+                                                            >No</label
+                                                        >
+                                                         
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex gap-2 justify-end mt-1"
                                         >
-                                            close
-                                        </button>
-                                        <button
-                                            class="rounded bg-green-800 text-white px-6 mt-1 py-2"
-                                            @click="toggleModal = false"
-                                        >
-                                            Submit
-                                        </button>
+                                            <button
+                                                class="rounded bg-red-500 text-white px-6 mt-1 py-2"
+                                                @click="toggleModal = false"
+                                            >
+                                                close
+                                            </button>
+                                            <button
+                                                class="rounded bg-green-800 text-white px-6 mt-1 py-2"
+                                                @click="toggleModal = false"
+                                            >
+                                                Submit
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -597,6 +605,7 @@ defineProps({
                     </div>
                 </div>
             </div>
+            <p class="">qwertyui</p>
         </div>
         <!-- <div class="absolute top-[100%] text-white bg-black w-full">
             <div class="flex">
