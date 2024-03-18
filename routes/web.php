@@ -47,6 +47,8 @@ Route::middleware([
     //     $data = Categories::all();
     //     return Inertia::render('Categories', compact('data'));
     // });
+
+    
 });
 
 
