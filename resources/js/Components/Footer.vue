@@ -15,15 +15,22 @@
                     Simiti Constructors
                 </h1>
             </div>
-            <p className="my-4 text-black">
+            <p className="my-4 text-gray-600">
                 Unlock Your Next Building Venture: Explore Listings from Leading
                 Contractors
             </p>
             <form className="mt-9">
                 <input
+                    placeholder="Enter your name"
+                    type="text"
+                    name="name"
+                    required
+                    className="px-2 py-1 rounded-lg text-black mb-2 w-[360px] "
+                />
+                <input
                     placeholder="Email adress"
                     type="email"
-                    name="user_email"
+                    name="email"
                     required
                     className="px-2 py-1 rounded-lg text-black mb-2 w-[360px] "
                 />
@@ -42,99 +49,70 @@
             </form>
         </div>
 
-        <div className="mx-2 md:col-span-2 flex justify-between">
+        <div className="mx-2 md:col-span-2 flex justify-between mt-5">
             <div>
-                <h2 className="text-[#e4c131] font-bold text-lg">Services</h2>
+                <h2 className="text-yellow-400 font-bold text-2xl mb-4">Services</h2>
                 <ul>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Payroll Services
+                    
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
+                            Best Supplier Listing
                         </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Accounting & Bookkeeping
+                    
+                    
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
+                            Quality Assurance
                         </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Taxation & Tax compliance
+                    
+                    
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
+                            Market Advice
                         </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Business advisory services
+                    
+                    
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
+                            Access to Quality
                         </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Kenya Diaspora tax services
-                        </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Vat filing Services
-                        </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Auditing and assurance
-                        </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Monthly Rental Income tax
-                        </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Business Immigration Services
-                        </li>
-                    </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Transfer Pricing
-                        </li>
-                    </a>
+                    
+                    
                 </ul>
             </div>
 
             <div>
-                <h2 className="text-[#e4c131] font-bold text-lg">
+                <h2 className="text-yellow-400 mb-4 font-bold text-2xl">
                     Quick Access
                 </h2>
                 <ul>
                     <a href="/">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
                             Home
                         </li>
                     </a>
-                    <a href="/Services">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
-                            Services
+                    <a href="/Blogs">
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
+                            Blogs
                         </li>
                     </a>
                     <a href="/About">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
                             About
                         </li>
                     </a>
                     <a href="#Contact">
-                        <li className="py-1 text-sm hover:text-[#00df9a]">
+                        <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
                             Contact
                         </li>
                     </a>
                 </ul>
             </div>
             <div>
-                <h2 className="text-[#e4c131] font-bold text-lg">Contacts</h2>
+                <h2 className="text-green-800 font-bold text-2xl mb-4">Contacts</h2>
                 <ul>
-                    <li className="py-1 text-sm">+254720565289</li>
-                    <li className="py-1 text-sm">+254734565289</li>
-                    <li className="py-1 text-sm">
-                        optimalauditadvisors@gmail.com
+                    <li className="py-1 text-gray-600 text-sm">0725613974</li>
+                    <li className="py-1 text-gray-600 text-sm">+254725613974</li>
+                    <li className="py-1 text-gray-600 text-sm">
+                        Simiti@gmail.com
                     </li>
-                    <li className="py-1 text-sm">Upperhill, Nairobi.</li>
+                    <li className="py-1 text-gray-600 text-sm">Nairobi.</li>
                 </ul>
             </div>
         </div>
