@@ -2,6 +2,7 @@
 import { Head, Link } from "@inertiajs/vue3";
 import "../../css/welcome.css";
 import Modal from "@/Components/Modal.vue";
+import Footer from "@/Components/Footer.vue";
 // import method from "vendor/livewire/livewire/js/action/method";
 
 defineProps({
@@ -605,7 +606,7 @@ defineProps({
                     </div>
                 </div>
             </div>
-            <p class="">qwertyui</p>
+            <Footer />
         </div>
         <!-- <div class="absolute top-[100%] text-white bg-black w-full">
             <div class="flex">
