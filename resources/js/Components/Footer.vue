@@ -44,7 +44,7 @@
                 <input
                     type="submit"
                     value="Send Message"
-                    className="bg-yellow-500 w-[180px] rounded-md  my-3  p-2 text-black font-bold focus:ring-1"
+                    className="bg-green-800 w-[180px] rounded-md  my-3  p-2 text-white font-bold focus:ring-1"
                 />
             </form>
         </div>
