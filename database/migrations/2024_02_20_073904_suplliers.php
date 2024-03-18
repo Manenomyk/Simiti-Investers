@@ -25,6 +25,7 @@ return new class extends Migration
             $table->int('annual_turnover')->required();
             $table->string('boost')->nullable();
             $table->string('comment')->nullable();
+            $table->boolean('isApproved')->default(false);
             $table->timestamps();
 
         });
