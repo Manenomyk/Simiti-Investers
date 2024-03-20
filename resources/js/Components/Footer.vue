@@ -1,4 +1,14 @@
-<script></script>
+<script setup>
+const form = useForm({
+    name: '',
+    email: '',
+    message: '',
+
+})
+const submit = () => {
+    form.post(route('supp.store'), {});
+};
+</script>
 <template>
     <div
         className="max-w-[1240px] mx-auto py-10 grid md:grid-cols-3 gap-8 text-gray-300"
@@ -19,11 +29,12 @@
                 Unlock Your Next Building Venture: Explore Listings from Leading
                 Contractors
             </p>
-            <form className="mt-9">
+            <form @submit.prevent="submit" className="mt-9">
                 <input
                     placeholder="Enter your name"
                     type="text"
                     name="name"
+                    v-model="form.name"
                     required
                     className="px-2 py-1 rounded-lg text-black mb-2 w-[360px] "
                 />
@@ -31,12 +42,14 @@
                     placeholder="Email adress"
                     type="email"
                     name="email"
+                    v-model="form.email"
                     required
                     className="px-2 py-1 rounded-lg text-black mb-2 w-[360px] "
                 />
                 <textarea
                     placeholder="Your Message"
                     name="message"
+                    v-model="form.message"
                     required
                     rows="{4}"
                     className="text-black w-[360px] rounded-lg px-2 py-1 mb-3"
