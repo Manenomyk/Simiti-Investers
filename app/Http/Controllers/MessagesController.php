@@ -19,6 +19,7 @@ class MessagesController extends Controller
         $sms -> email = $request->input('email');
         $sms -> message = $request->input('message');
         $sms->save();
-        return to_route('Footer')->with('plus', 'supplier saved!');
+        // return to_route('Blogs')->with('plus', 'supplier saved!');
+        return back()->with('plus', 'Saved!');
     }
 }

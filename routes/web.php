@@ -46,7 +46,7 @@ Route::middleware([
     Route::get('/Insurers', [InsurerController::class, 'index'])->name('insure.index');
 
     Route::post('/Suppliers', [BusinessController::class, 'store'])->name('supp.store');
-    Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
+    Route::post('/Blogs', [MessagesController::class, 'store'])->name('sms.store');
     // Route::get('/Categories', function(){
     //     $data = Categories::all();
     //     return Inertia::render('Categories', compact('data'));
