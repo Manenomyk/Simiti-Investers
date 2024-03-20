@@ -9,6 +9,7 @@ use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\InsurerController;
+use App\Http\Controllers\MessagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ Route::middleware([
     Route::get('/Insurers', [InsurerController::class, 'index'])->name('insure.index');
 
     Route::post('/Suppliers', [BusinessController::class, 'store'])->name('supp.store');
-    Route::post('/Suppliers', [BusinessController::class, 'store'])->name('supp.store');
+    Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
     // Route::get('/Categories', function(){
     //     $data = Categories::all();
     //     return Inertia::render('Categories', compact('data'));

@@ -1,12 +1,14 @@
 <script setup>
+import {useForm} from "@inertiajs/vue3";
+
 const form = useForm({
-    name: '',
+    user_name: '',
     email: '',
     message: '',
 
 })
 const submit = () => {
-    form.post(route('supp.store'), {});
+    form.post(route('sms.store'), {});
 };
 </script>
 <template>
@@ -33,8 +35,8 @@ const submit = () => {
                 <input
                     placeholder="Enter your name"
                     type="text"
-                    name="name"
-                    v-model="form.name"
+                    name="user_name"
+                    v-model="form.user_name"
                     required
                     className="px-2 py-1 rounded-lg text-black mb-2 w-[360px] "
                 />
