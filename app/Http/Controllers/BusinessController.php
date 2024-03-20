@@ -37,6 +37,6 @@ class BusinessController extends Controller
         $biz -> boost = $request->input('boost');
         $biz -> comment = $request->input('comment');
         $biz->save();
-        return to_route('Suppliers')->with('plus', 'supplier saved!');
+        return to_route('RegisterBusiness')->with('plus', 'supplier saved!');
     }
 }

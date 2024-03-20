@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../Components/Sidebar.vue";
 
@@ -18,12 +18,7 @@ const form = useForm({
 
 })
 const submit = () => {
-    form.post(route('Business.business'), {});
-};
-
-export default {
-    components: { Sidebar, AppLayout },
-
+    form.post(route('supp.store'), {});
 };
 
 </script>
@@ -81,7 +76,7 @@ export default {
                                 </div>
                                 <div class="flex flex-col">
                                     <span>Annual Turnover</span>
-                                    <input class="h-8 rounded" id="annual" type="text" v-model="form.annual" />
+                                    <input class="h-8 rounded" id="annual" type="text" v-model="form.annual_turnover" />
                                 </div>
                             </div>
                             <div class="md:flex gap-3 mb-5">
@@ -91,7 +86,7 @@ export default {
                                         name="Category"
                                         class="h-8 rounded"
                                         id="Category"
-                                        v-model="form.Category"
+                                        v-model="form.category"
                                     >
                                         <option value="volvo">
                                             Select Category
@@ -111,7 +106,7 @@ export default {
                                         name="Category"
                                         class="h-8 rounded"
                                         id="subCategory"
-                                        v-model="form.subCategory"
+                                        v-model="form.sub_category"
                                     >
                                         <option value="volvo">
                                             Select Category
