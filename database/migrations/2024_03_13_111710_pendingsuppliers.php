@@ -13,18 +13,19 @@ return new class extends Migration
     {
         Schema::create('Pending_Suppliers', function(Blueprint $table){
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('gender');
-            $table->string('location');
-            $table->string('region');
-            $table->string('phone');
+            $table->string('name')->required();
+            $table->string('email')->required();
+            $table->string('gender')->required();
+            $table->string('location')->required();
+            $table->string('region')->required();
+            $table->string('phone')->required();
             $table->string('photo')->nullable();
-            $table->string('category');
-            $table->string('sub_category');
-            $table->string('annual_turnover');
-            $table->string('boost');
-            $table->string('comment');
+            $table->string('category')->required();
+            $table->string('sub_category')->nullable();
+            $table->int('annual_turnover')->required();
+            $table->string('boost')->nullable();
+            $table->string('comment')->nullable();
+            $table->boolean('isApproved')->default(false);
             $table->timestamps();
 
         });

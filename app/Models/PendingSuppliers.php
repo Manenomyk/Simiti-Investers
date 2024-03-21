@@ -22,5 +22,6 @@ class PendingSuppliers extends Model
         'annual_turnover',
         'boost',
         'comment',
+        'isApproved',
     ];
 }
