@@ -22,7 +22,19 @@ defineProps({
                     <div
                         class="container m-auto flex justify-between items-center text-gray-700"
                     >
-                        <h1 class="pl-8 py-4 text-xl font-bold">SIMITI</h1>
+                        <div className="flex gap-2 ">
+                            <a href="/"
+                                ><img
+                                    src="../../Assets/log.png"
+                                    alt="/"
+                                    className="w-20 rounded-[50%] shadow-lg mx-2"
+                            /></a>
+                            <h1
+                                className="w-full text-2xl mt-4 font-bold text-green-800"
+                            >
+                                Simiti Constructors
+                            </h1>
+                        </div>
                         <ul
                             class="hidden md:flex items-center text-base font-semibold cursor-pointer"
                         >

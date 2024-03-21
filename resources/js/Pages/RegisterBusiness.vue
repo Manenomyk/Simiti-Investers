@@ -12,8 +12,9 @@ const form = useForm({
     location: '',
     region: '',
     photo: '',
-    Category: '',
-    subCategory: '',
+    category: '',
+    sub_category: '',
+    annual_turnover: '',
     comment: '',
     boost: '',
 
