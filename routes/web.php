@@ -57,7 +57,9 @@ Route::middleware([
 
 });
 
-
+Route::get('/About', function(){
+    return Inertia::render('About');
+});
 Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');
 });
