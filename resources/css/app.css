@@ -8,3 +8,7 @@
 .about_background{
     background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.8)), url('../Assets/back.avif');
 }
+.aboutHouse{
+    background-image:linear-gradient(rgba(130, 128, 128, 0.6), rgba(0,0,0,0.8)), url('../Assets/wave.jpg');
+    background-repeat: no-repeat;
+}
