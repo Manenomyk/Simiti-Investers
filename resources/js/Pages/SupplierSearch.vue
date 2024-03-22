@@ -1,5 +1,6 @@
 <script setup>
 import TopNav from "../Components/TopNav.vue";
+import Footer from "../Components/Footer.vue";
 
 defineProps({
     data: Object,
@@ -8,15 +9,16 @@ defineProps({
 <template>
     <div>
         <TopNav />
+        <div class="bg-gray-100 mb-10">
         <div
             className="max-w-[1240px] mt-4 mx-auto py-10 grid md:grid-cols-4 gap-8 text-gray-300"
         >
             <div
-                class="mt-10 rounded-md shadow-lg sm:items-center bg-gray-100 text-black"
+                class="mt-10 rounded-md shadow-lg sm:items-center bg-white text-black"
             >
                 <div class=" ">
                     <img
-                        src="../../Assets/log.png"
+                        src="../../Assets/team.svg"
                         class="rounded-full object-cover mb-5 h-[150px]"
                         alt="logo image"
                     />
@@ -30,15 +32,17 @@ defineProps({
                         contractors, and suppliers to streamline the
                         construction process.
                     </div>
-                    <div
-                        class="bg-[#c95906] rounded-lg w-[150px] text-white py-1 m-2 px-6"
+                    <a href="/About">
+                        <div
+                        class="bg-[#ecba00] rounded-lg w-[150px] text-white py-1 m-2 px-6"
                     >
                         Learn More
                     </div>
+                    </a>
                 </div>
             </div>
             <div
-                className=" container mx-2 md:col-span-3 rounded-md shadow-lg bg-gray-100 flex justify-between mt-10"
+                className=" container mx-2 md:col-span-3 rounded-md shadow-lg bg-white flex justify-between mt-10"
             >
                 <div class="w-full bg-gray-100 rounded-lg shadow-xl">
                     <div
@@ -46,7 +50,7 @@ defineProps({
                     >
                         Supplier search results
                     </div>
-                    <div class="w-full p-1 bg-white rounded-lg shadow-xl">
+                    <div class="w-full p-1 bg-white md">
                         <table
                             class="min-w-full border border-spacing-y-2 border-spacing-x-2 border-gray-300 rounded-sm"
                         >
@@ -128,5 +132,7 @@ defineProps({
                 </div>
             </div>
         </div>
+    </div>
+    <Footer />
     </div>
 </template>

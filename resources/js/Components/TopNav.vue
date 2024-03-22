@@ -30,11 +30,13 @@
                                 Home
                             </li>
                         </a>
-                        <li
+                        <a href="/About">
+                            <li
                             class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                         >
                             About
                         </li>
+                        </a>
                         <li
                             class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                         >
