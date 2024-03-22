@@ -71,7 +71,7 @@ class SuppliersResource extends Resource
                 ->description('Supplier Uploads')
                 ->schema([
                     FileUpload::make('photo'),
-                    Forms\Components\TextInput::make('annual-turnover')->required(),
+                    Forms\Components\TextInput::make('annual_turnover')->required(),
                 Radio::make('boost')->required()
                 ->options([
                     'Yes' => 'Yes',
