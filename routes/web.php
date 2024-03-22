@@ -62,6 +62,9 @@ Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');
 });
 
+Route::get('/SupplierSearch', function(){
+    return Inertia::render('SupplierSearch');
+});
 // Route::get('/Insurers', function(){
 //     return Inertia::render('Insurers');
 // });
