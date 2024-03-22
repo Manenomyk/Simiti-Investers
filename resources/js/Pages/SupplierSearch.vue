@@ -1,8 +1,8 @@
 <script>
 import TopNav from "../Components/TopNav.vue";
 export default {
-components: {TopNav }
-}
+    components: { TopNav },
+};
 </script>
 <template>
     <div>
@@ -30,11 +30,16 @@ components: {TopNav }
                         construction process.
                     </div>
                     <div
-                        class="bg-green-800 rounded-lg w-[150px] text-white py-1 m-2 px-6"
+                        class="bg-[#c95906] rounded-lg w-[150px] text-white py-1 m-2 px-6"
                     >
                         Learn More
                     </div>
                 </div>
+            </div>
+            <div
+                className=" container mx-2 md:col-span-3 rounded-md shadow-lg bg-gray-100 flex justify-between mt-10"
+            >
+                <div class="m-3 text-xl text-[#c95906] font-bold mb-6">Supplier search results</div>
             </div>
         </div>
     </div>
