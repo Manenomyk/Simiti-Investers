@@ -3,13 +3,14 @@
 use Inertia\Inertia;
 use App\Models\Categories;
 use App\Models\LogisticServices;
+use App\Models\PendingSuppliers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\InsurerController;
 use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\InsurerController;
-use App\Http\Controllers\MessagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,11 +46,12 @@ Route::middleware([
 
     Route::get('/Insurers', [InsurerController::class, 'index'])->name('insure.index');
 
-    Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('supp.store');
-    Route::post('/Blogs', [MessagesController::class, 'store'])->name('sms.store');
-    // Route::get('/Categories', function(){
-    //     $data = Categories::all();
-    //     return Inertia::render('Categories', compact('data'));
+    // Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('supp.store');
+    Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
+    
+    // Route::post('/RegisterBusiness', function(){
+    //     $data = PendingSuppliers::all();
+    //     return Inertia::render('RegisterBusiness', compact('data'));
     // });
 
 

@@ -19,9 +19,7 @@ const form = useForm({
     boost: '',
 
 })
-const submit = () => {
-    form.post(route('supp.store'), {});
-};
+
 
 </script>
 

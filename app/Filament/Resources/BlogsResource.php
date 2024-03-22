@@ -26,11 +26,11 @@ class BlogsResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')->required(),
-                Textarea::make('Content1')->required(),
+                Textarea::make('content1')->required(),
                 FileUpload::make('image1')->required(),
-                Textarea::make('Content2')->nullable(),
+                Textarea::make('content2')->nullable(),
                 FileUpload::make('image2')->nullable(),
-                Textarea::make('Content3')->nullable(),
+                Textarea::make('content3')->nullable(),
                 FileUpload::make('video1')->nullable(),
                 Textarea::make('about')->required(),
                 FileUpload::make('video2')->nullable(),
@@ -44,11 +44,11 @@ class BlogsResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('Content1'),
+                Tables\Columns\TextColumn::make('content1'),
                 Tables\Columns\TextColumn::make('image1'),
-                Tables\Columns\TextColumn::make('Content2'),
+                Tables\Columns\TextColumn::make('content2'),
                 Tables\Columns\TextColumn::make('image2'),
-                Tables\Columns\TextColumn::make('Content3'),
+                Tables\Columns\TextColumn::make('content3'),
                 Tables\Columns\TextColumn::make('video1'),
                 Tables\Columns\TextColumn::make('about'),
                 Tables\Columns\TextColumn::make('video2'),
