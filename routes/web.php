@@ -49,7 +49,7 @@ Route::middleware([
     Route::get('/Blogs', [BlogsController::class, 'index'])->name('blog.index');
 
 
-    // Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('supp.store');
+   
     Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
 
     Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('biz.store');
@@ -72,27 +72,11 @@ Route::get('/Portfolio', function(){
 Route::get('/SupplierSearch', function(){
     return Inertia::render('SupplierSearch');
 });
-// Route::get('/Insurers', function(){
-//     return Inertia::render('Insurers');
-// });
+
 Route::get('/Review', function(){
     return Inertia::render('Review');
 });
 
-// Route::get('/ServiceProviders', function(){
-//     return Inertia::render('ServiceProviders');
-// });
-
-
-// Route::post('/RegisterBusiness', function(){
-//     return 'awesome';
-// });
-
 Route::get('/BlogPosts', function(){
     return Inertia::render('BlogPosts');
 });
-
-
-// Route::controller(BusinessController::class)->group(function(){
-//     Route::post('/RegisterBusiness', 'business')->name('Business.business');
-// });
