@@ -5,7 +5,6 @@ import Sidebar from "../Components/Sidebar.vue";
 defineProps({
     data: Object,
 });
-
 </script>
 
 <template>
@@ -16,8 +15,10 @@ defineProps({
                     <Sidebar />
                 </div>
                 <div class="bg-gray-100">
-                    {{ data }}
+                    <!-- {{ data }} -->
                     <div
+                        v-for="item in data"
+                        :key="item.id"
                         className="max-w-[1240px] mx-auto mx-3 grid md:grid-cols-4 gap-2 text-gray-300"
                     >
                         <div
@@ -26,7 +27,6 @@ defineProps({
                             <div
                                 class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-10 border-b border-gray-200"
                             >
-                            
                                 <div>
                                     <img src="../../Assets/pic.svg" alt="" />
                                 </div>
@@ -34,7 +34,7 @@ defineProps({
                                     <h2
                                         class="text-gray-700 font-bold text-4xl pb-4"
                                     >
-                                        My amazing blog post
+                                        {{ item.title }}
                                     </h2>
 
                                     <span class="text-gray-500">
@@ -48,18 +48,12 @@ defineProps({
                                     <p
                                         class="text-md text-gray-700 pt-8 pb-5 leading-8 font-light"
                                     >
-                                        Lorem ipsum dolor, sit amet consectetur
-                                        adipisicing elit. Culpa obcaecati,
-                                        facilis quis quas beatae asperiores,
-                                        dignissimos, dolore nostrum rem minus
-                                        quo dolorum. Voluptates, libero
-                                        accusamus assumenda nobis repellat
-                                        numquam suscipit.
+                                        {{ item.content1 }}
                                     </p>
 
                                     <a
                                         href=""
-                                        class=" bg-green-800 text-white font-extrabold py-2 m-2 px-6 rounded-lg"
+                                        class="bg-green-800 text-white font-extrabold py-2 m-2 px-6 rounded-lg"
                                         >Read more</a
                                     >
                                 </div>
