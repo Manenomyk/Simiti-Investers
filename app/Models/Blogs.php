@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Blogs extends Model implements HasMedia
+class Blogs extends Model 
 {
-    use HasFactory, InteractsWithMedia;
+    use HasFactory;
 
     public $fillable = [
         'title',

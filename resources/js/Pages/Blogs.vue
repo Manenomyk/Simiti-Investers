@@ -1,9 +1,11 @@
-<script>
+<script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../Components/Sidebar.vue";
-export default {
-    components: { Sidebar, AppLayout },
-};
+
+defineProps({
+    data: Object,
+});
+
 </script>
 
 <template>
@@ -23,6 +25,7 @@ export default {
                             <div
                                 class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-10 border-b border-gray-200"
                             >
+                            
                                 <div>
                                     <img src="../../Assets/pic.svg" alt="" />
                                 </div>

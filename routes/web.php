@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogsController;
 use Inertia\Inertia;
 use App\Models\Categories;
 use App\Models\LogisticServices;
@@ -45,6 +46,8 @@ Route::middleware([
     Route::get('/ServiceProviders', [LogisticsController::class, 'index'])->name('logi.index');
 
     Route::get('/Insurers', [InsurerController::class, 'index'])->name('insure.index');
+    Route::get('/Blogs', [BlogsController::class, 'index'])->name('blog.index');
+
 
     // Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('supp.store');
     Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
@@ -84,9 +87,7 @@ Route::get('/Review', function(){
 // Route::post('/RegisterBusiness', function(){
 //     return 'awesome';
 // });
-Route::get('/Blogs', function(){
-    return Inertia::render('Blogs');
-});
+
 Route::get('/BlogPosts', function(){
     return Inertia::render('BlogPosts');
 });
