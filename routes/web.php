@@ -48,6 +48,8 @@ Route::middleware([
 
     // Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('supp.store');
     Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
+
+    Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('biz.store');
     
     // Route::post('/RegisterBusiness', function(){
     //     $data = PendingSuppliers::all();

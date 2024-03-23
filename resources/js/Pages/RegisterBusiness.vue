@@ -18,7 +18,7 @@ const form = useForm({
     boost: "",
 });
 const submit = () => {
-    form.post(route('sms.store'), {});
+    form.post(route("biz.store"), {});
 };
 </script>
 
@@ -196,17 +196,11 @@ const submit = () => {
                                 </div>
                             </div>
                             <div class="flex gap-2 justify-end mt-1">
-                                <button
-                                    class="rounded bg-red-500 text-white px-6 mt-1 py-2"
-                                >
-                                    Clear
-                                </button>
-                                <button
+                                <input
                                     type="submit"
                                     class="rounded bg-green-800 text-white px-6 mt-1 py-2"
-                                >
-                                    Submit
-                                </button>
+                                    value="Submit"
+                                />
                             </div>
                         </form>
                     </div>
