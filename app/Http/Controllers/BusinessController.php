@@ -38,6 +38,6 @@ class BusinessController extends Controller
         $biz -> comment = $request->input('comment');
         $biz->save();
         // return to_route('RegisterBusiness')->with('plus', 'supplier saved!');
-        return back()->with('plus', 'Saved!');
+        return view('/RegisterBusiness');
     }
 }
