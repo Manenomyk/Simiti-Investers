@@ -45,11 +45,13 @@ defineProps({
                                     Home
                                 </li>
                             </a>
-                            <li
+                            <a href="/About">
+                                <li
                                 class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                             >
                                 About
                             </li>
+                            </a>
                             <li
                                 class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                             >
@@ -336,12 +338,14 @@ defineProps({
                             offerings can enrich our network and benefit our
                             valued customers.
                         </p>
-                        <button
-                            @click="toggleModal = !toggleModal"
+                        <a href="/register">
+                            <button
+                            
                             className="bg-green-800 w-[200px] rounded-md  my-6 mx-auto md:mx-0 p-2 text-white font-bold"
                         >
                             Register Business
                         </button>
+                        </a>
                     </div>
                 </div>
             </div>
