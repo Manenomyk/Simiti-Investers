@@ -9,9 +9,10 @@ use Illuminate\Http\Request;
 
 class BlogsController extends Controller
 {
-    public function index( ){
+    public function index()
+    {
         $data = Blogs::all();
-        return Inertia::render('Blogs', compact('data'));
+        return Inertia::render('Blogs', compact('data'))
+            ->with('data', Blogs::orderBy('updated_at', 'DESC')->get());
     }
-   
 }

@@ -16,6 +16,7 @@ defineProps({
                     <Sidebar />
                 </div>
                 <div class="bg-gray-100">
+                    {{ data }}
                     <div
                         className="max-w-[1240px] mx-auto mx-3 grid md:grid-cols-4 gap-2 text-gray-300"
                     >
