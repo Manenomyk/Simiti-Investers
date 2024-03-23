@@ -42,11 +42,13 @@ export default {
                                     contractors, and suppliers to streamline the
                                     construction process.
                                 </div>
-                                <div
-                                    class="bg-[#ecba00] rounded-lg w-[150px] text-black py-1 m-2 px-6"
-                                >
-                                    Learn More
-                                </div>
+                                <a href="/About">
+                                    <div
+                                        class="bg-[#ecba00] rounded-lg w-[150px] text-black py-1 m-2 px-6"
+                                    >
+                                        Learn More
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
