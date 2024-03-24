@@ -15,4 +15,22 @@ class BlogsController extends Controller
         return Inertia::render('Blogs', compact('data'))
             ->with('data', Blogs::orderBy('updated_at', 'DESC')->get());
     }
+
+    public function store(Request $request){
+        $request->validate([
+            'title'=>'required',
+            'content1'=>'required',
+            'image1'=>'required|mimes:jpg,png,jpeg|max:5048',
+            'content2'=>'nullable',
+            'image2'=>'nullable',
+            'content3'=>'nullable',
+            'video1'=>'nullable',
+            'video2'=>'nullable',
+            'profile'=>'required|mimes:jpg,png,jpeg|max:5048',
+            'about'=>'required',
+        ]);
+
+        $newimage = uniqid() . '.' . $request->image1->extension(); 
+        $request ->image1->move(public_path('images'), $newimage);
+    }
 }

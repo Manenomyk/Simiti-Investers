@@ -42,7 +42,7 @@ defineProps({
                                         <span
                                             class="font-bold italic text-gray-800"
                                             >Amazing Bahati</span
-                                        >, daily routine
+                                        >, Created on {{ item.updated_at }}
                                     </span>
 
                                     <p
