@@ -1,15 +1,16 @@
 <?php
 
-use App\Http\Controllers\BlogsController;
 use Inertia\Inertia;
 use App\Models\Categories;
 use App\Models\LogisticServices;
 use App\Models\PendingSuppliers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\InsurerController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\BlogPostsController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
 
@@ -61,6 +62,7 @@ Route::middleware([
 
 
 });
+Route::get('/BlogPosts', [BlogPostsController::class, 'index'])->name('blo.index');
 
 Route::get('/About', function(){
     return Inertia::render('About');
@@ -77,6 +79,6 @@ Route::get('/Review', function(){
     return Inertia::render('Review');
 });
 
-Route::get('/BlogPosts', function(){
-    return Inertia::render('BlogPosts');
-});
+// Route::get('/BlogPosts', function(){
+//     return Inertia::render('BlogPosts');
+// });

@@ -1,6 +1,10 @@
 <script setup>
 import Footer from "@/Components/Footer.vue";
 import TopNav from "../Components/TopNav.vue";
+
+defineProps({
+    data: Object,
+});
 </script>
 
 <template>
@@ -8,6 +12,8 @@ import TopNav from "../Components/TopNav.vue";
         <TopNav />
         <div class="bg-gray-100">
             <div
+                v-for="item in data"
+                :key="item.id"
                 className="max-w-[1240px] mt-4 mx-auto py-10 grid md:grid-cols-5 gap-8 text-gray-300 mb-10"
             >
                 <div
@@ -25,11 +31,7 @@ import TopNav from "../Components/TopNav.vue";
                             About the Owner
                         </div>
                         <div class="text-sm m-2">
-                            Welcome to Simiti, your premier destination for all
-                            things construction. With a passion for innovation
-                            and a commitment to excellence, we bring together
-                            builders, contractors, and suppliers to streamline
-                            the construction process.
+                            {{ item.about }}
                         </div>
                         <div
                             class="bg-[#ecba00] rounded-lg w-[150px] text-black py-1 m-2 px-6"
@@ -38,9 +40,38 @@ import TopNav from "../Components/TopNav.vue";
                         </div>
                     </div>
                 </div>
+
                 <div
-                    className=" container md:col-span-3 rounded-md shadow-lg bg-white flex justify-between mt-10"
-                ></div>
+                    className=" container md:col-span-3 rounded-md shadow-lg bg-white p-5 mt-10"
+                >
+                    <div class="w-[400px]">
+                        <img src="../../Assets/pic.svg" alt="" />
+                    </div>
+                    <div>
+                        <h2 class="text-gray-700 font-bold text-3xl pb-4">
+                            {{ item.title }}
+                        </h2>
+
+                        <span class="text-gray-500">
+                            By
+                            <span class="font-bold italic text-gray-800"
+                                >Amazing Bahati</span
+                            >, Created on {{ item.updated_at }}
+                        </span>
+
+                        <p
+                            class="text-md text-gray-700 pt-8 pb-5 leading-8 font-light"
+                        >
+                            {{ item.content1 }}
+                        </p>
+
+                        <a
+                            href=""
+                            class="bg-green-800 text-white font-extrabold py-2 m-2 px-6 rounded-lg"
+                            >Read more</a
+                        >
+                    </div>
+                </div>
                 <div
                     class="mt-10 rounded-md shadow-lg sm:items-center bg-white text-black"
                 >
