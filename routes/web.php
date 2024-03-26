@@ -53,6 +53,7 @@ Route::middleware([
    
     Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
 
+
     Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('biz.store');
     
     // Route::post('/RegisterBusiness', function(){
@@ -67,6 +68,9 @@ Route::get('/BlogPosts', [BlogPostsController::class, 'index'])->name('blo.index
 Route::get('/About', function(){
     return Inertia::render('About');
 });
+Route::get('/Package', function(){
+    return Inertia::render('Package');
+});
 Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');
 });
@@ -78,7 +82,3 @@ Route::get('/SupplierSearch', function(){
 Route::get('/Review', function(){
     return Inertia::render('Review');
 });
-
-// Route::get('/BlogPosts', function(){
-//     return Inertia::render('BlogPosts');
-// });

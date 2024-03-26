@@ -12,3 +12,11 @@
     background-image:linear-gradient(rgba(130, 128, 128, 0.6), rgba(0,0,0,0.8)), url('../Assets/wave.jpg');
     background-repeat: no-repeat;
 }
+.back{
+    background-image: url('../Assets/work.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
+}

@@ -1,18 +1,15 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../Components/Sidebar.vue";
-
-
 </script>
 <template>
-  <div>
+    <div>
         <AppLayout title="Dashboard" class="flex-1">
             <div class="flex min-h-screen">
                 <Sidebar />
                 <div class="w-full mt-5 flex justify-center items-center">
                     <div class="mx-auto w-auto max-w-2xl">
                         <form
-                           
                             class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col"
                         >
                             <div
@@ -27,7 +24,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="name"
                                         type="text"
-                                        
                                     />
                                 </div>
                                 <div class="flex flex-col">
@@ -36,7 +32,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="email"
                                         type="text"
-                                        
                                     />
                                 </div>
                             </div>
@@ -47,7 +42,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="gender"
                                         type="text"
-                                        
                                     />
                                 </div>
                                 <div class="flex flex-col">
@@ -56,7 +50,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="location"
                                         type="text"
-                                        
                                     />
                                 </div>
                             </div>
@@ -67,7 +60,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="region"
                                         type="text"
-                                       
                                     />
                                 </div>
                                 <div class="flex flex-col">
@@ -76,7 +68,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="phone"
                                         type="text"
-                                        
                                     />
                                 </div>
                             </div>
@@ -87,7 +78,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="photo"
                                         type="text"
-                                        
                                     />
                                 </div>
                                 <div class="flex flex-col">
@@ -96,18 +86,13 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="h-8 rounded"
                                         name="annual"
                                         type="text"
-                                        
                                     />
                                 </div>
                             </div>
                             <div class="md:flex gap-3 mb-5">
                                 <div class="flex flex-col">
                                     <span>Category</span>
-                                    <select
-                                        name="category"
-                                        class="h-8 rounded"
-                                        
-                                    >
+                                    <select name="category" class="h-8 rounded">
                                         <option value="volvo">
                                             Select Category
                                         </option>
@@ -125,7 +110,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                     <select
                                         class="h-8 rounded"
                                         name="sub_category"
-                                       
                                     >
                                         <option value="volvo">
                                             Select Category
@@ -147,7 +131,6 @@ import Sidebar from "../Components/Sidebar.vue";
                                         class="rounded"
                                         name="comment"
                                         rows="4"
-                                        
                                     >
                                     </textarea>
                                 </div>
@@ -155,24 +138,19 @@ import Sidebar from "../Components/Sidebar.vue";
                                     <span>Boost</span>
                                     <div class="flex flex-col">
                                         <div>
-                                             
                                             <input
                                                 type="radio"
                                                 name="boost"
                                                 value="HTML"
-                                                
                                             />
-                                              <label for="html">Yes</label
-                                            ><br />
-                                             
+                                            <label for="html">Yes</label><br />
+
                                             <input
                                                 type="radio"
                                                 name="boost"
                                                 value="CSS"
-                                                
                                             />
-                                              <label for="css">No</label>
-                                             
+                                            <label for="css">No</label>
                                         </div>
                                     </div>
                                 </div>
@@ -190,7 +168,4 @@ import Sidebar from "../Components/Sidebar.vue";
             </div>
         </AppLayout>
     </div>
-
 </template>
-
-
