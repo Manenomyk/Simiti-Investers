@@ -105,7 +105,7 @@ const submit = () => {
                             Home
                         </li>
                     </a>
-                    <a href="/Blogs">
+                    <a href="/BlogPosts">
                         <li className="py-1 text-sm text-gray-600 hover:text-[#00df9a]">
                             Blogs
                         </li>

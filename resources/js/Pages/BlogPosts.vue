@@ -48,7 +48,7 @@ defineProps({
                         <img src="../../Assets/pic.svg" alt="" />
                     </div>
                     <div>
-                        <h2 class="text-gray-700 font-bold text-3xl pb-4">
+                        <h2 class="text-gray-700 font-bold text-3xl mt-4 pb-4">
                             {{ item.title }}
                         </h2>
 
