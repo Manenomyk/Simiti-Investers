@@ -59,31 +59,7 @@ const submit = () => {
                                 </div>
                             </div>
                             <div class="md:flex gap-3 mb-5">
-                                <div class="flex flex-col">
-                                    <span>Gender</span>
-                                    <div class="flex flex-col">
-                                        <div>
-                                             
-                                            <input
-                                                type="radio"
-                                                name="boost"
-                                                value="Male"
-                                                v-model="form.boost"
-                                            />
-                                              <label for="html">Male</label
-                                            ><br />
-                                             
-                                            <input
-                                                type="radio"
-                                                name="boost"
-                                                value="Female"
-                                                v-model="form.boost"
-                                            />
-                                              <label for="css">Female</label>
-                                             
-                                        </div>
-                                    </div>
-                                </div>
+                               
                                 <div class="flex flex-col">
                                     <span>Location</span>
                                     <input
@@ -93,8 +69,6 @@ const submit = () => {
                                         v-model="form.location"
                                     />
                                 </div>
-                            </div>
-                            <div class="md:flex gap-3 mb-5">
                                 <div class="flex flex-col">
                                     <span>Region</span>
                                     <input
@@ -104,6 +78,9 @@ const submit = () => {
                                         v-model="form.region"
                                     />
                                 </div>
+                            </div>
+                            <div class="md:flex gap-3 mb-5">
+                                
                                 <div class="flex flex-col">
                                     <span>Phone</span>
                                     <input
@@ -113,6 +90,7 @@ const submit = () => {
                                         v-model="form.phone"
                                     />
                                 </div>
+                                
                             </div>
                             <div class="md:flex gap-3 mb-5">
                                 <div class="flex flex-col">
@@ -139,7 +117,7 @@ const submit = () => {
                                     <span>Category</span>
                                     <select
                                         name="category"
-                                        class="h-8 rounded"
+                                        class="h-8 rounded w-[250px]"
                                         v-model="form.category"
                                     >
                                         <option value="Select Category">
@@ -157,7 +135,7 @@ const submit = () => {
                                 <div class="flex flex-col">
                                     <span>Sub-Category</span>
                                     <select
-                                        class="h-8 rounded"
+                                        class="h-8 rounded w-[240px]"
                                         name="sub_category"
                                         v-model="form.sub_category"
                                     >
@@ -178,12 +156,41 @@ const submit = () => {
                                 <div class="flex flex-col">
                                     <span>Comment</span>
                                     <textarea
-                                        class="rounded"
+                                        class="rounded "
                                         name="comment"
                                         rows="4"
+                                        cols="45"
                                         v-model="form.comment"
                                     >
                                     </textarea>
+                                </div>
+                                
+                            </div>
+                            <div class="md:flex justify-between gap-3 mb-5">
+                                <div class="flex flex-col">
+                                    <span>Gender</span>
+                                    <div class="flex flex-col">
+                                        <div>
+                                             
+                                            <input
+                                                type="radio"
+                                                name="boost"
+                                                value="Male"
+                                                v-model="form.boost"
+                                            />
+                                              <label for="html">Male</label
+                                            ><br />
+                                             
+                                            <input
+                                                type="radio"
+                                                name="boost"
+                                                value="Female"
+                                                v-model="form.boost"
+                                            />
+                                              <label for="css">Female</label>
+                                             
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="flex flex-col">
                                     <span>Boost</span>
@@ -211,10 +218,10 @@ const submit = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex gap-2 justify-end mt-1">
+                            <div class="flex gap-2 justify-center mt-1">
                                 <input
                                     type="submit"
-                                    class="rounded bg-green-800 text-white px-6 mt-1 py-2"
+                                    class="rounded bg-green-800 text-white px-6 mt-1 py-2 w-[200px] flex text-center"
                                     value="Submit"
                                 />
                             </div>
