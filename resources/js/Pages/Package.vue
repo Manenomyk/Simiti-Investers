@@ -177,7 +177,7 @@ import Footer from "@/Components/Footer.vue";
                                     </div>
                                 </div>
                             </div>
-                            <Footer />
+                            <div class="mx-4"><Footer /></div>
                         </div>
                     </div>
                 </div>
