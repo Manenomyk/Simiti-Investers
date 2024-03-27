@@ -1,6 +1,6 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
-import Sidebar from "../Components/Sidebar.vue";
+import Sidebar from "../../Components/Sidebar.vue";
 </script>
 <template>
     <div>

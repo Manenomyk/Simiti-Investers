@@ -54,13 +54,26 @@ Route::middleware([
     Route::post('/', [MessagesController::class, 'store'])->name('sms.store');
 
 
-    Route::post('/RegisterBusiness', [BusinessController::class, 'store'])->name('biz.store');
-    
+    Route::get('/RegisterBusiness', [BusinessController::class, 'index'])->name('biz.index');
+    Route::get('/RegisterBusiness/{id}', [BusinessController::class, 'show'])->name('biz.show');
+    Route::get('/Business/create', [BusinessController::class, 'create'])->name('biz.create');
+    // Route::get('/RegisterBusiness/create', function(){
+    //     dd('hey you');
+    //     return Inertia::render('Business');
+    // })->name('biz.create');
+
+
+    Route::post('/RegisterBusiness/store', [BusinessController::class, 'store'])->name('biz.store');
+    Route::get('/RegisterBusiness/edit/{id}', [BusinessController::class, 'edit'])->name('biz.edit');
+    Route::put('/RegisterBusiness/update/{id}', [BusinessController::class, 'update'])->name('biz.update');
+    Route::delete('/RegisterBusiness/delete/{id}', [BusinessController::class, 'delete'])->name('biz.delete');
     // Route::post('/RegisterBusiness', function(){
     //     $data = PendingSuppliers::all();
     //     return Inertia::render('RegisterBusiness', compact('data'));
     // });
-
+    // Route::post('/Business', function(){
+    //     return Inertia::render('Business');
+    // });
 
 });
 Route::get('/BlogPosts', [BlogPostsController::class, 'index'])->name('blo.index');
@@ -71,6 +84,7 @@ Route::get('/About', function(){
 Route::get('/Package', function(){
     return Inertia::render('Package');
 });
+
 Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');
 });

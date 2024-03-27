@@ -1,5 +1,6 @@
 <script setup>
 import { HomeIcon } from "@heroicons/vue/24/solid";
+import { Link } from "@inertiajs/vue3";
 import { ref } from "vue";
 
 const menuOpen = ref(false);
@@ -55,15 +56,15 @@ const menuOpen = ref(false);
                         />
                         Home
                     </a>
-                    <a
-                        href="/RegisterBusiness"
+                    <Link
+                        :href="route('biz.create')"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
                         <HomeIcon
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Register Business
-                    </a>
+                    </Link>
                     <a
                         href="/Portfolio"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"

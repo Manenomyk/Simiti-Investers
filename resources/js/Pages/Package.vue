@@ -3,6 +3,8 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../Components/Sidebar.vue";
 import "../../css/app.css";
 import Footer from "@/Components/Footer.vue";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 </script>
 <template>
     <div>
@@ -64,7 +66,7 @@ import Footer from "@/Components/Footer.vue";
                                             class="bg-green-800 p-[1px] mx-auto w-[100px] mb-6"
                                         />
                                         <div class="text-sm m-2">
-                                            <p>Access to blogs</p>
+                                            <font-awesome-icon :icon="['fas', 'thumbs-up']" class="w-[20px]" /><p>Access to blogs</p>
                                             <p>Supplier view</p>
                                             <p>Unlimited Customer Service</p>
                                             <p>
@@ -150,7 +152,7 @@ import Footer from "@/Components/Footer.vue";
                                         <div
                                             class="font-bold text-3xl text-yellow-600 text-center"
                                         >
-                                            Ksh 800<span
+                                            Ksh 9,900<span
                                                 class="text-gray-500 text-lg font-bold"
                                                 >/Year</span
                                             >
