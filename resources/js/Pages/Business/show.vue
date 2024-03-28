@@ -18,20 +18,43 @@ defineProps({
                 <div
                     className=" container grid grid-cols-2 rounded-md  shadow-lg bg-white p-5 mx-10 my-2"
                 >
+                    {{ data }}
                     <div class="w-[400px] flex justify-center align-center">
                         <img src="../../../Assets/pic.svg" alt="" />
                     </div>
                     <div>
                         <h2 class="text-gray-700 font-bold text-3xl mt-4 pb-4">
-                            {{data.name}}
+                            {{ data.name }}
                         </h2>
 
                         <span class="text-gray-500">
-                            By
-                            <span class="font-bold italic text-gray-800"
-                                >Amazing Bahati</span
+                            <span class="font-bold italic text-gray-800">{{
+                                data.email
+                            }}</span
                             >, Created on {{ data.updated_at }}
                         </span>
+
+                        <div class="md:flex gap-3 mb-5 mt-10">
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold mb-2"
+                                    >Category Name</span
+                                >
+                                <p
+                                    class="bg-blue-200 w-[300px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.category }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <span>Email</span>
+                            <input
+                                required
+                                class="h-8 rounded"
+                                name="email"
+                                type="text"
+                            />
+                        </div>
 
                         <p
                             class="text-md text-gray-700 pt-8 pb-5 leading-8 font-light"
