@@ -1,9 +1,11 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../../Components/Sidebar.vue";
+import { Link } from "@inertiajs/vue3";
 
 defineProps({
     data: Object,
+    supp: Object,
 });
 </script>
 <template>
@@ -22,7 +24,6 @@ defineProps({
                             class="mt-3 ml-3 text-xl text-[#c95906] font-bold mb-2"
                         >
                             Supplier Portfolio
-                            
                         </div>
                         <div class="w-full p-1 bg-white md">
                             <table
@@ -96,11 +97,19 @@ defineProps({
                                             {{ item.location }}
                                         </td>
                                         <td class="" data-label="Farm Name">
-                                            <button
-                                                class="rounded bg-green-800 text-white px-6 mt-1 py-1 w-[85px] flex text-center"
+                                            <Link
+                                                :href="
+                                                    route('biz.show', {
+                                                        supp: item.id,
+                                                    })
+                                                "
                                             >
-                                                View
-                                            </button>
+                                                <button
+                                                    class="rounded bg-green-800 text-white px-6 mt-1 py-1 w-[85px] flex text-center"
+                                                >
+                                                    View
+                                                </button>
+                                            </Link>
                                         </td>
                                     </tr>
                                 </tbody>

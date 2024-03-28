@@ -18,10 +18,10 @@ class BusinessController extends Controller
     }
     public function show(string $id){
         $data = Suppliers::where('id', $id)->first();
+        dd($data);
         return inertia('Business/show', compact('data'));
     }
     public function create(){
-        // dd("any lucky me");
         return Inertia::render('Business/store');
     }
     public function store( Request $request){
