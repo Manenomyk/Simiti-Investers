@@ -5,7 +5,6 @@ import { Link } from "@inertiajs/vue3";
 
 defineProps({
     data: Object,
-    supp: Object,
 });
 </script>
 <template>
@@ -100,7 +99,7 @@ defineProps({
                                             <Link
                                                 :href="
                                                     route('biz.show', {
-                                                        supp: item.id,
+                                                        id: item.id,
                                                     })
                                                 "
                                             >

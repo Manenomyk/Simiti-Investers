@@ -42,6 +42,7 @@ const submit = () => {
                                 <div class="flex flex-col">
                                     <span>Name</span>
                                     <input
+                                        required
                                         class="h-8 rounded"
                                         name="name"
                                         type="text"
@@ -51,6 +52,7 @@ const submit = () => {
                                 <div class="flex flex-col">
                                     <span>Email</span>
                                     <input
+                                        required
                                         class="h-8 rounded"
                                         name="email"
                                         type="text"
@@ -59,10 +61,10 @@ const submit = () => {
                                 </div>
                             </div>
                             <div class="md:flex gap-3 mb-5">
-                               
                                 <div class="flex flex-col">
                                     <span>Location</span>
                                     <input
+                                        required
                                         class="h-8 rounded"
                                         name="location"
                                         type="text"
@@ -72,6 +74,7 @@ const submit = () => {
                                 <div class="flex flex-col">
                                     <span>Region</span>
                                     <input
+                                        required
                                         class="h-8 rounded"
                                         name="region"
                                         type="text"
@@ -80,22 +83,22 @@ const submit = () => {
                                 </div>
                             </div>
                             <div class="md:flex gap-3 mb-5">
-                                
                                 <div class="flex flex-col">
                                     <span>Phone</span>
                                     <input
+                                        required
                                         class="h-8 rounded"
                                         name="phone"
                                         type="text"
                                         v-model="form.phone"
                                     />
                                 </div>
-                                
                             </div>
                             <div class="md:flex gap-3 mb-5">
                                 <div class="flex flex-col">
                                     <span>Photo</span>
                                     <input
+                                        required
                                         class="h-8 rounded"
                                         name="photo"
                                         type="text"
@@ -105,6 +108,7 @@ const submit = () => {
                                 <div class="flex flex-col">
                                     <span>Annual Turnover</span>
                                     <input
+                                        required
                                         class="h-8 rounded"
                                         name="annual"
                                         type="text"
@@ -129,7 +133,9 @@ const submit = () => {
                                         <option value="Drilling">
                                             Drilling
                                         </option>
-                                        <option value="Borehole">Borehole</option>
+                                        <option value="Borehole">
+                                            Borehole
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="flex flex-col">
@@ -148,7 +154,9 @@ const submit = () => {
                                         <option value="Drilling">
                                             Drilling
                                         </option>
-                                        <option value="Borehole">Borehole</option>
+                                        <option value="Borehole">
+                                            Borehole
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -156,7 +164,7 @@ const submit = () => {
                                 <div class="flex flex-col">
                                     <span>Comment</span>
                                     <textarea
-                                        class="rounded "
+                                        class="rounded"
                                         name="comment"
                                         rows="4"
                                         cols="45"
@@ -164,7 +172,6 @@ const submit = () => {
                                     >
                                     </textarea>
                                 </div>
-                                
                             </div>
                             <div class="md:flex justify-between gap-3 mb-5">
                                 <div class="flex flex-col">
@@ -173,6 +180,7 @@ const submit = () => {
                                         <div>
                                              
                                             <input
+                                                required
                                                 type="radio"
                                                 name="boost"
                                                 value="Male"
@@ -182,6 +190,7 @@ const submit = () => {
                                             ><br />
                                              
                                             <input
+                                                required
                                                 type="radio"
                                                 name="boost"
                                                 value="Female"
@@ -198,6 +207,7 @@ const submit = () => {
                                         <div>
                                              
                                             <input
+                                                required
                                                 type="radio"
                                                 name="boost"
                                                 value="Yes"
@@ -207,6 +217,7 @@ const submit = () => {
                                             ><br />
                                              
                                             <input
+                                                required
                                                 type="radio"
                                                 name="boost"
                                                 value="No"
@@ -220,6 +231,7 @@ const submit = () => {
                             </div>
                             <div class="flex gap-2 justify-center mt-1">
                                 <input
+                                    required
                                     type="submit"
                                     class="rounded bg-green-800 text-white px-6 mt-1 py-2 w-[200px] flex text-center"
                                     value="Submit"

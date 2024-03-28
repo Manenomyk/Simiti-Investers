@@ -10,11 +10,13 @@ import Sidebar from "../Components/Sidebar.vue";
             <!-- <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Accountant</h2>
         </template> -->
-            <div class="flex min-h-screen">
-                <Sidebar />
-                <div class="outercard md:flex-row flex-col mt-4 flex-1">
-                    <div class="flex">
-                        <div class="card1 mx-auto mb-3 mr-[1rem]">
+            <div class="flex">
+                <div class="min-h-screen">
+                    <Sidebar />
+                </div>
+                <div class="w-screen  ">
+                    <div class="flex gap-10 justify-center">
+                        <div class="card1 mx-auto mb-3 ">
                             <div class="text-center mt-2">
                                 <p class="cardhead">
                                     <i>Total Users</i>
@@ -36,9 +38,9 @@ import Sidebar from "../Components/Sidebar.vue";
                                 <h3>trucks</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex">
-                        <div class="card3 mx-auto mb-3 mr-[1rem]">
+                    
+                    
+                        <div class="card3 mx-auto mb-3 ">
                             <div class="text-center mt-2">
                                 <p>
                                     <i>Total Customers</i>
@@ -62,7 +64,7 @@ import Sidebar from "../Components/Sidebar.vue";
                         </div>
                     </div>
                 </div>
-                <canvas id="first"></canvas>
+                
             </div>
         </AppLayout>
     </div>
