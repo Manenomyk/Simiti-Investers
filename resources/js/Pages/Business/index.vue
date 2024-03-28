@@ -4,7 +4,7 @@ import Sidebar from "../../Components/Sidebar.vue";
 
 defineProps({
     data: Object,
-})
+});
 </script>
 <template>
     <div>
@@ -13,7 +13,7 @@ defineProps({
                 <div>
                     <Sidebar />
                 </div>
-                
+
                 <div
                     className=" container mx-2 md:col-span-3 rounded-md shadow-lg bg-white flex justify-between mt-2"
                 >
@@ -22,6 +22,7 @@ defineProps({
                             class="mt-3 ml-3 text-xl text-[#c95906] font-bold mb-2"
                         >
                             Supplier Portfolio
+                            
                         </div>
                         <div class="w-full p-1 bg-white md">
                             <table
@@ -74,31 +75,32 @@ defineProps({
                                             class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
                                             data-label="Farm Name"
                                         >
-                                            {{ item.categories_name }}
+                                            {{ item.name }}
                                         </td>
                                         <td
                                             class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
                                             data-label="Farm Name"
                                         >
-                                            {{ item.sub_categories }}
+                                            {{ item.category }}
                                         </td>
                                         <td
                                             class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
                                             data-label="Farm Name"
                                         >
-                                            {{ item.created_at }}
+                                            {{ item.region }}
                                         </td>
                                         <td
                                             class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
                                             data-label="Farm Name"
                                         >
-                                            {{ item.sub_categories }}
+                                            {{ item.location }}
                                         </td>
-                                        <td
-                                            class="flex flex-col px-4 py-2 sm:table-cell sm:py-4 lg:table-cell before:content-[attr(data-label)] sm:before:content-none before:text-[0.625rem] before:uppercase before:font-medium sm:pl-6"
-                                            data-label="Farm Name"
-                                        >
-                                            view
+                                        <td class="" data-label="Farm Name">
+                                            <button
+                                                class="rounded bg-green-800 text-white px-6 mt-1 py-1 w-[85px] flex text-center"
+                                            >
+                                                View
+                                            </button>
                                         </td>
                                     </tr>
                                 </tbody>

@@ -1,9 +1,10 @@
-<script>
+<script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../Components/Sidebar.vue";
-export default {
-    components: { Sidebar, AppLayout },
-};
+
+defineProps({
+    data: Object,
+});
 </script>
 <template>
     <div>

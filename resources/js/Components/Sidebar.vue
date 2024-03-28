@@ -65,15 +65,15 @@ const menuOpen = ref(false);
                         />
                         Register Business
                     </Link>
-                    <a
-                        href="/Portfolio"
+                    <Link
+                        :href="route('biz.index')"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
                         <HomeIcon
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Portfolio
-                    </a>
+                    </Link>
 
                     <a
                         href="/Review"
