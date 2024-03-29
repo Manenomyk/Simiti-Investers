@@ -2,6 +2,7 @@
 
 use Inertia\Inertia;
 use App\Models\Categories;
+use App\Models\SupplierSearch;
 use App\Models\LogisticServices;
 use App\Models\PendingSuppliers;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,8 @@ use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\BlogPostsController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\SupplierSearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +45,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
-    Route::get('/Categories', [CategoriesController::class, 'index'])->name('catego.index');
+   
     
     Route::get('/ServiceProviders', [LogisticsController::class, 'index'])->name('logi.index');
 
@@ -76,7 +79,9 @@ Route::middleware([
     // });
 
 });
+Route::get('/Categories', [CategoriesController::class, 'index'])->name('catego.index');
 Route::get('/BlogPosts', [BlogPostsController::class, 'index'])->name('blo.index');
+Route::get('/Search/index', [SupplierSearchController::class, 'index'])->name('search.index');
 
 Route::get('/About', function(){
     return Inertia::render('About');
@@ -89,9 +94,10 @@ Route::get('/Portfolio', function(){
     return Inertia::render('Portfolio');
 });
 
-Route::get('/SupplierSearch', function(){
-    return Inertia::render('SupplierSearch');
-});
+// Route::get('/SupplierSearch', function(){
+//     return Inertia::render('SupplierSearch');
+// });
+
 
 Route::get('/Review', function(){
     return Inertia::render('Review');

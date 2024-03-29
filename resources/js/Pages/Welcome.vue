@@ -1,7 +1,7 @@
 <script setup>
 import { Head, Link } from "@inertiajs/vue3";
 import "../../css/welcome.css";
-import Modal from "@/Components/Modal.vue";
+import { useForm } from "@inertiajs/vue3";
 import Footer from "@/Components/Footer.vue";
 // import method from "vendor/livewire/livewire/js/action/method";
 
@@ -10,7 +10,15 @@ defineProps({
     canRegister: Boolean,
     laravelVersion: String,
     phpVersion: String,
+    data: Object,
 });
+
+const form = useForm({
+    search: "",
+});
+const submit = () => {
+    form.get(route("search.index"), {});
+};
 </script>
 
 <template>
@@ -246,17 +254,23 @@ defineProps({
                         >
                             Find access to the markets leading brands
                         </h3>
-                        <input
+                        <form @submit.prevent="submit">
+                            <input
                             type="text"
+                            name="search"
+                            v-model="form.search"
                             placeholder="Search for Suppliers "
                             class="rounded-lg"
                         />
-                        <button
-                            type="reset"
+                        <input
+                            type="submit"
+                            value="Search"
                             class="px-8 py-2.5 bg-green-900 text-white rounded-lg ml-2 hover:bg-green-800"
-                        >
-                            Search
-                        </button>
+                        />
+                            
+                    
+                        </form>
+                        
                     </div>
                     <div class="flex justify-center gap-2 mt-5">
                         <h5 class="font-bold text-blue-600">
