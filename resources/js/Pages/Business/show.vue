@@ -18,7 +18,6 @@ defineProps({
                 <div
                     className=" container grid grid-cols-2 rounded-md  shadow-lg bg-white p-5 mx-10 my-2"
                 >
-                    {{ data }}
                     <div class="w-[400px] flex justify-center align-center">
                         <img src="../../../Assets/pic.svg" alt="" />
                     </div>
@@ -36,41 +35,99 @@ defineProps({
 
                         <div class="md:flex gap-3 mb-5 mt-10">
                             <div class="flex flex-col">
-                                <span class="text-md font-bold mb-2"
+                                <span class="text-md font-bold">Region</span>
+                                <p
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.region }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold">Location</span>
+                                <p
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.location }}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="md:flex gap-3 mb-5">
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold"
                                     >Category Name</span
                                 >
                                 <p
-                                    class="bg-blue-200 w-[300px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.category }}
                                 </p>
                             </div>
-                        </div>
-                        <div class="flex flex-col">
-                            <span>Email</span>
-                            <input
-                                required
-                                class="h-8 rounded"
-                                name="email"
-                                type="text"
-                            />
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold"
+                                    >Sub-Category Name</span
+                                >
+                                <p
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.sub_category }}
+                                </p>
+                            </div>
                         </div>
 
-                        <p
-                            class="text-md text-gray-700 pt-8 pb-5 leading-8 font-light"
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Error consequuntur ratione officia, minima
-                            quaerat quos? Natus, molestias? Suscipit totam,
-                            nulla excepturi natus aliquid nemo veniam fuga
-                            atque, voluptatum rem nostrum?
-                        </p>
+                        <div class="md:flex gap-3 mb-5">
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold">Gender</span>
+                                <p
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.gender }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold"
+                                    >Annual Turnover</span
+                                >
+                                <p
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.annual_turnover }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="md:flex gap-3 mb-5">
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold"
+                                    >Contact Number</span
+                                >
+                                <p
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.phone }}
+                                </p>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-md font-bold">Comment</span>
+                                <p
+                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                >
+                                    {{ data.comment }}
+                                </p>
+                            </div>
+                        </div>
 
-                        <a
-                            href=""
-                            class="bg-green-800 text-white font-extrabold py-2 m-2 px-6 rounded-lg"
-                            >Read more</a
-                        >
+                        <div class="flex gap-4">
+                            <a
+                                href=""
+                                class="flex justify-center w-[200px] bg-green-800 text-white font-extrabold py-2 my-2 px-6 rounded-lg"
+                                >Rate</a
+                            >
+                            <a
+                                href=""
+                                class="flex justify-center w-[200px] bg-green-800 text-white font-extrabold py-2 my-2 px-6 rounded-lg"
+                                >Review</a
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
