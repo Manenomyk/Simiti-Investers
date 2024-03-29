@@ -1,9 +1,18 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../Components/Sidebar.vue";
+import { computed } from "vue";
 
 defineProps({
     data: Object,
+});
+
+const computedImagePath = computed(() => (image) => {
+    if (!image || !image) {
+        console.error("Image or image name is missing:", image);
+        return ""; // Or provide a default path
+    }
+    return `/storage/public/${image}`;
 });
 </script>
 
@@ -28,7 +37,11 @@ defineProps({
                                 class="sm:grid grid-cols-2 gap-20 w-full mx-auto py-10 border-b border-gray-200"
                             >
                                 <div>
-                                    <img src="../../Assets/pic.svg" alt="" />
+                                    <img
+                            :src="computedImagePath(item.image1)"
+                            class="absolute flex align-center"
+                            alt=""
+                        />
                                 </div>
                                 <div>
                                     <h2
