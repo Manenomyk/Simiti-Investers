@@ -1,9 +1,18 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Sidebar from "../../Components/Sidebar.vue";
+import { computed } from "vue";
 
 defineProps({
     data: Object,
+});
+
+const computedImagePath = computed(() => (image) => {
+    if (!image || !image) {
+        console.error("Image or image name is missing:", image);
+        return ""; // Or provide a default path
+    }
+    return `/storage/${image}`;
 });
 </script>
 <template>
@@ -18,10 +27,16 @@ defineProps({
                 <div
                     className=" container grid grid-cols-2 rounded-md  shadow-lg bg-white p-5 mx-10 my-2"
                 >
-                    <div class="w-[400px] flex justify-center align-center">
-                        <img src="../../../Assets/pic.svg" alt="" />
+                    <div
+                        class="relative flex justify-center align-center"
+                    >
+                        <img
+                            :src="computedImagePath(data.photo)"
+                            class="absolute flex align-center"
+                            alt=""
+                        />
                     </div>
-                    <div>
+                    <div class="relative">
                         <h2 class="text-gray-700 font-bold text-3xl mt-4 pb-4">
                             {{ data.name }}
                         </h2>
@@ -35,17 +50,17 @@ defineProps({
 
                         <div class="md:flex gap-3 mb-5 mt-10">
                             <div class="flex flex-col">
-                                <span class="text-md font-bold">Region</span>
+                                <span class="text-sm">Region</span>
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.region }}
                                 </p>
                             </div>
                             <div class="flex flex-col">
-                                <span class="text-md font-bold">Location</span>
+                                <span class="text-sm">Location</span>
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.location }}
                                 </p>
@@ -54,21 +69,21 @@ defineProps({
 
                         <div class="md:flex gap-3 mb-5">
                             <div class="flex flex-col">
-                                <span class="text-md font-bold"
+                                <span class="text-sm"
                                     >Category Name</span
                                 >
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.category }}
                                 </p>
                             </div>
                             <div class="flex flex-col">
-                                <span class="text-md font-bold"
+                                <span class="text-sm"
                                     >Sub-Category Name</span
                                 >
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.sub_category }}
                                 </p>
@@ -77,19 +92,19 @@ defineProps({
 
                         <div class="md:flex gap-3 mb-5">
                             <div class="flex flex-col">
-                                <span class="text-md font-bold">Gender</span>
+                                <span class="text-sm">Gender</span>
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.gender }}
                                 </p>
                             </div>
                             <div class="flex flex-col">
-                                <span class="text-md font-bold"
+                                <span class="text-sm"
                                     >Annual Turnover</span
                                 >
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.annual_turnover }}
                                 </p>
@@ -97,19 +112,19 @@ defineProps({
                         </div>
                         <div class="md:flex gap-3 mb-5">
                             <div class="flex flex-col">
-                                <span class="text-md font-bold"
+                                <span class="text-sm"
                                     >Contact Number</span
                                 >
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.phone }}
                                 </p>
                             </div>
                             <div class="flex flex-col">
-                                <span class="text-md font-bold">Comment</span>
+                                <span class="text-sm">Comment</span>
                                 <p
-                                    class="bg-blue-200 w-[200px] border-gray-100 rounded-md px-5 py-1"
+                                    class="bg-blue-50 text-gray-500 w-[200px] border-gray-100 rounded-md px-5 py-1"
                                 >
                                     {{ data.comment }}
                                 </p>

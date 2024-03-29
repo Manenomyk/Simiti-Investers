@@ -30,7 +30,7 @@ class BusinessController extends Controller
             'gender'=> 'required',
             'location'=> 'required',
             'region'=> 'required',
-            'photo'=> 'nullable',
+            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'phone'=> 'required',
             'category'=> 'required',
             'sub_category'=> 'nullable',
@@ -39,22 +39,24 @@ class BusinessController extends Controller
             'comment'=> 'nullable',
         ]);
 
-        $biz = new PendingSuppliers();
+        $biz = new Suppliers();
         $biz -> name = $request->input('name');
         $biz -> email = $request->input('email');
         $biz -> gender = $request->input('gender');
         $biz -> location = $request->input('location');
         $biz -> region = $request->input('region');
-        $biz -> photo = $request->input('photo');
+        // $biz -> photo = $request->input('photo');
         $biz -> phone = $request->input('phone');
         $biz -> category = $request->input('category');
         $biz -> sub_category = $request->input('sub_category');
         $biz -> annual_turnover = $request->input('annual_turnover');
         $biz -> boost = $request->input('boost');
         $biz -> comment = $request->input('comment');
+        $path = $request->file('photo')->store('images', 'public');
+        $biz->photo = $path;
         $biz->save();
-        // return to_route('RegisterBusiness')->with('plus', 'supplier saved!');
-        return view('/RegisterBusiness');
+        return back()->with('plus', 'supplier saved!');
+        // return view('/RegisterBusiness');
     }
 
     public function edit(string $id){

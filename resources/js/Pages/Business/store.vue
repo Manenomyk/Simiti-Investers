@@ -18,7 +18,9 @@ const form = useForm({
     boost: "",
 });
 const submit = () => {
-    form.post(route("biz.store"), {});
+    form.post(route("biz.store"), {
+        onSuccess: () => form.reset(),
+    });
 };
 </script>
 
@@ -30,6 +32,7 @@ const submit = () => {
                 <div class="w-full mt-5 flex justify-center items-center">
                     <div class="mx-auto w-auto max-w-2xl">
                         <form
+                            enctype="multipart/form-data"
                             @submit.prevent="submit"
                             class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col"
                         >
@@ -101,8 +104,10 @@ const submit = () => {
                                         required
                                         class="h-8 rounded"
                                         name="photo"
-                                        type="text"
-                                        v-model="form.photo"
+                                        type="file"
+                                        @input="
+                                            form.photo = $event.target.files[0]
+                                        "
                                     />
                                 </div>
                                 <div class="flex flex-col">
@@ -182,9 +187,9 @@ const submit = () => {
                                             <input
                                                 required
                                                 type="radio"
-                                                name="boost"
+                                                name="gender"
                                                 value="Male"
-                                                v-model="form.boost"
+                                                v-model="form.gender"
                                             />
                                               <label for="html">Male</label
                                             ><br />
@@ -192,9 +197,9 @@ const submit = () => {
                                             <input
                                                 required
                                                 type="radio"
-                                                name="boost"
+                                                name="gender"
                                                 value="Female"
-                                                v-model="form.boost"
+                                                v-model="form.gender"
                                             />
                                               <label for="css">Female</label>
                                              

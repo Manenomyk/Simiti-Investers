@@ -13,7 +13,7 @@ class SupplierSearchController extends Controller
         $data = Suppliers::query()
             ->when($request->input('search'), function ($query, $search) {
                 $query->where('category', 'LIKE', "%{$search}%");
-            });
+            })->get();
             
         return inertia('Search/index', compact('data'));
     }
