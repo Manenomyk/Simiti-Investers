@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('Blogs', function(Blueprint $table){
             $table->id();
             $table->string('title')->required();
-            $table->string('content1')->required();
+            $table->longText('content1')->required();
             $table->string('image1')->required();
-            $table->string('content2')->nullable();
+            $table->longText('content2')->nullable();
             $table->string('image2')->nullable();
             $table->string('video1')->nullable();
-            $table->string('content3')->nullable();
+            $table->longText('content3')->nullable();
             $table->string('video2')->nullable();
             $table->string('profile')->nullable();
-            $table->string('about')->nullable();
+            $table->longText('about')->nullable();
             $table->timestamps();
 
         });

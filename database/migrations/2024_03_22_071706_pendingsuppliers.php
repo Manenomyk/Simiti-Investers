@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('sub_category')->nullable(true);
             $table->string('annual_turnover')->required();
             $table->string('boost')->nullable(true);
-            $table->string('comment')->nullable(true);
+            $table->longText('comment')->nullable(true);
             $table->boolean('isApproved')->default(false);
             $table->timestamps();
 

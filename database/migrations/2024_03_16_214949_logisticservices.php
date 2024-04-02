@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('region');
             $table->string('phone');
             $table->string('photo')->nullable();
-            $table->string('comment');
+            $table->longText('comment');
             $table->timestamps();
 
         });
