@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 use App\Models\Blogs;
+use App\Models\Suppliers;
 use Illuminate\Http\Request;
 
 
@@ -30,11 +31,24 @@ class BlogsController extends Controller
             'profile'=>'required|mimes:jpg,png,jpeg|max:5048',
             'about'=>'required',
         ]);
-
-        $newimage = uniqid() . '.' . $request->image1->extension(); 
-        $request ->image1->move(public_path('images'), $newimage);
-        dd($newimage);
-        $newimage1 = uniqid() . '.' . $request->image2->extension(); 
-        $request ->image1->move(public_path('images'), $newimage1);
+        $biz = new Blogs();
+        $biz -> title = $request->input('title');
+        $biz -> content1 = $request->input('content1');
+        $biz -> content2 = $request->input('content2');
+        $biz -> content3 = $request->input('content3');
+        $biz -> video1 = $request->input('video1');
+        $biz -> video2 = $request->input('video2');
+        $biz -> profile = $request->input('profile');
+       
+        $path = $request->file('image1')->store('blogs', 'public');
+        $biz->image1 = $path;
+        $path = $request->file('image2')->store('blogs', 'public');
+        $biz->image2 = $path;
+        $path = $request->file('video1')->store('blogs', 'public');
+        $biz->video1 = $path;
+        $path = $request->file('video2')->store('blogs', 'public');
+        $biz->video2 = $path;
+        $biz->save();
+        return back()->with('plus', 'supplier saved!');
     }
 }

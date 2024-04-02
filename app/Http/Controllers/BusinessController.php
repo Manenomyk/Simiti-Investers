@@ -39,7 +39,7 @@ class BusinessController extends Controller
             'comment'=> 'nullable',
         ]);
 
-        $biz = new Suppliers();
+        $biz = new PendingSuppliers();
         $biz -> name = $request->input('name');
         $biz -> email = $request->input('email');
         $biz -> gender = $request->input('gender');
