@@ -2,6 +2,7 @@
 import Footer from "@/Components/Footer.vue";
 import TopNav from "../Components/TopNav.vue";
 import { useForm } from "@inertiajs/vue3";
+import '../../css/welcome.css';
 
 defineProps({
     data: Object,
@@ -18,7 +19,7 @@ const submit = () => {
     <div>
         <TopNav />
         <div
-            class="back mt-20 sm:flex sm:justify-center sm:items-center h-[30rem] bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
+            class="back1 mt-20 sm:flex sm:justify-center sm:items-center h-[30rem] bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
             <div class="md:w-[50%] text-center">
                 <h1 class="font-bold text-5xl text-gray-300">
                     <span class="text-yellow-400">Find the Best</span>
@@ -39,10 +40,12 @@ const submit = () => {
 
             </div>
         </div>
+
         <div class="flex gap-6 justify-center mt-10">
+            {{ data }}
             <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
                 <div>
-                    <h2 className="text-orange-600 mb-4 font-bold text-2xl">
+                    <h2 className="text-gray-400 mb-4 font-bold text-2xl">
                         Categories
                     </h2>
 
@@ -56,7 +59,7 @@ const submit = () => {
             </div>
             <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
                 <div>
-                    <h2 className="text-orange-600 mb-4 font-bold text-2xl">
+                    <h2 className="text-gray-400 mb-4 font-bold text-2xl">
                         Sub-Categories
                     </h2>
                     <div>
@@ -67,7 +70,7 @@ const submit = () => {
             </div>
             <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
                 <div>
-                    <h2 className="text-orange-600 mb-4 font-bold text-2xl">
+                    <h2 className="text-gray-400 mb-4 font-bold text-2xl">
                         Featured Suppliers
                     </h2>
                     <div>
