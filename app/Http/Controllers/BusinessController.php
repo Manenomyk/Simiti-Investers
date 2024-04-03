@@ -30,7 +30,7 @@ class BusinessController extends Controller
             'gender'=> 'required',
             'location'=> 'required',
             'region'=> 'required',
-            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,svg,webp|max:2048',
             'phone'=> 'required',
             'category'=> 'required',
             'sub_category'=> 'nullable',

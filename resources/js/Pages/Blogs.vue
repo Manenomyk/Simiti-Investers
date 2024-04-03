@@ -12,7 +12,7 @@ const computedImagePath = computed(() => (image) => {
         console.error("Image or image name is missing:", image);
         return ""; // Or provide a default path
     }
-    return `/storage/public/${image}`;
+    return `/storage/${image}`;
 });
 </script>
 
@@ -24,7 +24,7 @@ const computedImagePath = computed(() => (image) => {
                     <Sidebar />
                 </div>
                 <div class="bg-gray-100 mx-4">
-                    <!-- {{ data }} -->
+                    {{ data }}
                     <div
                         v-for="item in data"
                         :key="item.id"
@@ -40,6 +40,7 @@ const computedImagePath = computed(() => (image) => {
                                     <img
                             :src="computedImagePath(item.image1)"
                             class="absolute flex align-center"
+                            style="width: 100%;height:100%; object-fit:fill;"
                             alt=""
                         />
                                 </div>
