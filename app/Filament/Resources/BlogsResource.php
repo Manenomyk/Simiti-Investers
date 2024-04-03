@@ -27,14 +27,29 @@ class BlogsResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')->required(),
                 Textarea::make('content1')->required(),
-                FileUpload::make('image1')->required(),
+                FileUpload::make('image1')->required()
+                ->columns(1)
+                ->directory('suppImages')
+                ->storeFileNamesIn('photos'),
                 Textarea::make('content2')->nullable(),
-                FileUpload::make('image2')->nullable(),
+                FileUpload::make('image2')->nullable()
+                ->columns(1)
+                    ->directory('suppImages')
+                    ->storeFileNamesIn('photos'),
                 Textarea::make('content3')->nullable(),
-                FileUpload::make('video1')->nullable(),
+                FileUpload::make('video1')->nullable()
+                ->columns(1)
+                    ->directory('suppImages')
+                    ->storeFileNamesIn('photos'),
                 Textarea::make('about')->required(),
-                FileUpload::make('video2')->nullable(),
-                FileUpload::make('profile')->required(),
+                FileUpload::make('video2')->nullable()
+                ->columns(1)
+                    ->directory('suppImages')
+                    ->storeFileNamesIn('photos'),
+                FileUpload::make('profile')->required()
+                ->columns(1)
+                    ->directory('suppImages')
+                    ->storeFileNamesIn('photos'),
                 
             ]);
     }

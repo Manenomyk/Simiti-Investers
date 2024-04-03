@@ -51,7 +51,10 @@ class InsuranceServicesResource extends Resource
             Forms\Components\Section::make('')
             ->description('Logistic Services Uploads')
             ->schema([
-                FileUpload::make('photo'),
+                FileUpload::make('photo')
+                ->columns(1)
+                    ->directory('suppImages')
+                    ->storeFileNamesIn('photos'),
         
             ])->columns(3),
             
