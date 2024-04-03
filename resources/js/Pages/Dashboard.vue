@@ -2,6 +2,9 @@
 import AppLayout from "@/Layouts/AppLayout.vue";
 import { HomeIcon } from "@heroicons/vue/24/solid";
 import Sidebar from "../Components/Sidebar.vue";
+import Chart from 'chart.js/auto';
+
+
 </script>
 
 <template>
@@ -63,6 +66,9 @@ import Sidebar from "../Components/Sidebar.vue";
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="grid grid-cols-2">
+                    
                 </div>
                 
             </div>

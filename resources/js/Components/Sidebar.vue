@@ -75,7 +75,7 @@ const menuOpen = ref(false);
                         Portfolio
                     </Link>
 
-                    <a
+                    <!-- <a
                         href="/Review"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
@@ -83,7 +83,7 @@ const menuOpen = ref(false);
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Review
-                    </a>
+                    </a> -->
                     <a
                         href="/Categories"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
