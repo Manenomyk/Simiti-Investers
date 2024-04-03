@@ -86,6 +86,9 @@ Route::get('/Search/index', [SupplierSearchController::class, 'index'])->name('s
 Route::get('/About', function(){
     return Inertia::render('About');
 });
+Route::get('/SearchBar', function(){
+    return Inertia::render('SearchBar');
+});
 Route::get('/Package', function(){
     return Inertia::render('Package');
 });

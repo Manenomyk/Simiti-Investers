@@ -1,19 +1,84 @@
 <script setup>
 import Footer from "@/Components/Footer.vue";
 import TopNav from "../Components/TopNav.vue";
+import { useForm } from "@inertiajs/vue3";
 
 defineProps({
     data: Object,
 });
 
+const form = useForm({
+    search: "",
+});
+const submit = () => {
+    form.get(route("search.index"), {});
+};
 </script>
 <template>
     <div>
         <TopNav />
-        <div className="about_background w-full h-[30rem] mt-18 bg-cover bg-center">
-            <h1 className="w-full text-3xl font-bold text-[#e4c131] text-end absolute top-[25rem] pr-6 ">
-                Explore a world of posibilities
-            </h1>
+        <div
+            class="back mt-20 sm:flex sm:justify-center sm:items-center h-[30rem] bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
+            <div class="md:w-[50%] text-center">
+                <h1 class="font-bold text-5xl text-gray-300">
+                    <span class="text-yellow-400">Find the Best</span>
+                    Construction Material Suppliers
+                </h1>
+                <div class="mt-5">
+
+                    <form @submit.prevent="submit">
+                        <input type="text" name="search" v-model="form.search" placeholder="Search for Suppliers "
+                            class="rounded-lg" />
+                        <input type="submit" value="Search"
+                            class="px-8 py-2.5 bg-green-900 text-white rounded-lg ml-2 hover:bg-green-800" />
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="flex gap-6 justify-center mt-10">
+            <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
+                <div>
+                    <h2 className="text-orange-600 mb-4 font-bold text-2xl">
+                        Categories
+                    </h2>
+
+                    <div>
+                        <p class="text-sm text-[#00df9a]">home</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
+                <div>
+                    <h2 className="text-orange-600 mb-4 font-bold text-2xl">
+                        Sub-Categories
+                    </h2>
+                    <div>
+                        <p class="text-sm text-[#00df9a]">home</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
+                <div>
+                    <h2 className="text-orange-600 mb-4 font-bold text-2xl">
+                        Featured Suppliers
+                    </h2>
+                    <div>
+                        <p class="text-sm text-[#00df9a]">home</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <Footer />
         </div>
     </div>
 </template>
