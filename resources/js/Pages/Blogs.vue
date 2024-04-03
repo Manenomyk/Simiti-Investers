@@ -24,11 +24,11 @@ const computedImagePath = computed(() => (image) => {
                     <Sidebar />
                 </div>
                 <div class="bg-gray-100 mx-4">
-                    {{ data }}
+                    <!-- {{ data }} -->
                     <div
                         v-for="item in data"
                         :key="item.id"
-                        className="max-w-[1240px] mx-auto mx-3 grid md:grid-cols gap-2 text-gray-300"
+                        className="max-w-[1240px] mx-auto grid md:grid-cols gap-2 text-gray-300"
                     >
                         <div
                             className=" container rounded-md shadow-lg bg-white flex justify-between mt-10"
