@@ -14,6 +14,7 @@ use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\BlogPostsController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\SearchBarController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\SupplierSearchController;
 
@@ -81,14 +82,16 @@ Route::middleware([
 });
 Route::get('/Categories', [CategoriesController::class, 'index'])->name('catego.index');
 Route::get('/BlogPosts', [BlogPostsController::class, 'index'])->name('blo.index');
+Route::get('/SearchBar', [SearchBarController::class, 'index'])->name('sarch.index');
+
 Route::get('/Search/index', [SupplierSearchController::class, 'index'])->name('search.index');
 
 Route::get('/About', function(){
     return Inertia::render('About');
 });
-Route::get('/SearchBar', function(){
-    return Inertia::render('SearchBar');
-});
+// Route::get('/SearchBar', function(){
+//     return Inertia::render('SearchBar');
+// });
 Route::get('/Package', function(){
     return Inertia::render('Package');
 });
