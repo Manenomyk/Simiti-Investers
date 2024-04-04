@@ -31,7 +31,7 @@ const submit = () => {
                         <input type="text" name="search" v-model="form.search" placeholder="Search for Suppliers "
                             class="rounded-lg" />
                         <input type="submit" value="Search"
-                            class="px-8 py-2.5 bg-green-900 text-white rounded-lg ml-2 hover:bg-green-800" />
+                            class="px-8 py-2.5 bg-green-500 text-white rounded-lg ml-2 hover:bg-green-500" />
 
 
                     </form>
@@ -42,15 +42,15 @@ const submit = () => {
         </div>
 
         <div class="flex gap-6 justify-center mt-10">
-            {{ data }}
+            <!-- {{ data }} -->
             <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
                 <div>
                     <h2 className="text-gray-400 mb-4 font-bold text-xl">
                         Availlable Categories
                     </h2>
 
-                    <div>
-                        <p class="text-sm text-[#00df9a]">home</p>
+                    <div v-for="item in data" :key="item.id">
+                        <p class="text-md text-green-500 font-bold">{{ item.categories_name }}</p>
                     </div>
 
 
@@ -62,8 +62,8 @@ const submit = () => {
                     <h2 className="text-gray-400 mb-4 font-bold text-xl">
                         Sub-Categories
                     </h2>
-                    <div>
-                        <p class="text-sm text-[#00df9a]">home</p>
+                    <div v-for="item in data" :key="item.id">
+                        <p class="text-md text-green-500 font-bold">{{ item.sub_categories }}</p>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@ const submit = () => {
                         Featured Suppliers
                     </h2>
                     <div>
-                        <p class="text-sm text-[#00df9a]">home</p>
+                        <p class="text-md text-green-500 font-bold">home</p>
                     </div>
                 </div>
 
