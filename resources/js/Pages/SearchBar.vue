@@ -45,8 +45,8 @@ const submit = () => {
             {{ data }}
             <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
                 <div>
-                    <h2 className="text-gray-400 mb-4 font-bold text-2xl">
-                        Categories
+                    <h2 className="text-gray-400 mb-4 font-bold text-xl">
+                        Availlable Categories
                     </h2>
 
                     <div>
@@ -59,7 +59,7 @@ const submit = () => {
             </div>
             <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
                 <div>
-                    <h2 className="text-gray-400 mb-4 font-bold text-2xl">
+                    <h2 className="text-gray-400 mb-4 font-bold text-xl">
                         Sub-Categories
                     </h2>
                     <div>
@@ -70,7 +70,7 @@ const submit = () => {
             </div>
             <div class="w-64  bg-gray-100 p-5 shadow-lg rounded-md">
                 <div>
-                    <h2 className="text-gray-400 mb-4 font-bold text-2xl">
+                    <h2 className="text-gray-400 mb-4 font-bold text-xl">
                         Featured Suppliers
                     </h2>
                     <div>
