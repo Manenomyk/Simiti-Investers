@@ -1,5 +1,5 @@
 <script>
-
+import { Link } from "@inertiajs/vue3";
 </script>
 <template>
   <div class="w-screen justify-item-center">
@@ -37,42 +37,11 @@
                             About
                         </li>
                         </a>
-                        <li
-                            class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
-                        >
-                            <button
-                                class="relative flex justify-center items-center gap-5 pt-0 bg-gray-100 border focus:outline-none shadow text-gray-600 rounded focus:ring ring-gray-800 hover:rounded-lg group"
-                            >
-                                <p class="px-4">Find suppliers</p>
-                                <span class="border-l p-2 hover:bg-gray-100"
-                                    ><img
-                                        src="../../Assets/arrow.png"
-                                        class="w-3"
-                                        alt=""
-                                /></span>
-                                <div
-                                    class="absolute hidden group-focus:block z-20 top-full min-w-full w-max bg-white shadow-md mt-1 rounded"
-                                >
-                                    <ul class="text-left border rounded">
-                                        <li
-                                            class="px-4 py-1 hover:bg-gray-100 border-b"
-                                        >
-                                            Featured Suppliers
-                                        </li>
-                                        <li
-                                            class="px-4 py-1 hover:bg-gray-100 border-b"
-                                        >
-                                            Search By Category
-                                        </li>
-                                        <li
-                                            class="px-4 py-1 hover:bg-gray-100 border-b"
-                                        >
-                                            Search By Region
-                                        </li>
-                                    </ul>
-                                </div>
-                            </button>
-                        </li>
+                        <Link :href="route('sarch.index')">
+                                <li class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6">
+                                    Quick Access
+                                </li>
+                            </Link>
                         <li
                             class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                         >
@@ -108,45 +77,7 @@
                                 >
                                     About
                                 </li>
-                                <li
-                                    class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
-                                >
-                                    <button
-                                        class="relative flex justify-center items-center gap-5 pt-0 bg-gray-100 border focus:outline-none shadow text-gray-600 rounded focus:ring ring-gray-800 hover:rounded-lg group"
-                                    >
-                                        <p class="px-4">Find suppliers</p>
-                                        <span
-                                            class="border-l p-2 hover:bg-gray-100"
-                                            ><img
-                                                src="../../Assets/arrow.png"
-                                                class="w-3"
-                                                alt=""
-                                        /></span>
-                                        <div
-                                            class="fixed hidden group-focus:block z-20 top-full min-w-full w-max bg-white shadow-md mt-1 rounded"
-                                        >
-                                            <ul
-                                                class="text-left border rounded"
-                                            >
-                                                <li
-                                                    class="px-4 py-1 hover:bg-gray-100 border-b"
-                                                >
-                                                    Featured Suppliers
-                                                </li>
-                                                <li
-                                                    class="px-4 py-1 hover:bg-gray-100 border-b"
-                                                >
-                                                    Search By Category
-                                                </li>
-                                                <li
-                                                    class="px-4 py-1 hover:bg-gray-100 border-b"
-                                                >
-                                                    Search By Region
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </button>
-                                </li>
+                                import { Head, Link } from "@inertiajs/vue3";
                                 <li
                                     class="hover:bg-green-800 hover:rounded-lg hover:text-white py-2 px-6"
                                 >
