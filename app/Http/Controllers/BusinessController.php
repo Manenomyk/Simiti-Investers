@@ -24,6 +24,8 @@ class BusinessController extends Controller
         return Inertia::render('Business/store');
     }
     public function store( Request $request){
+        $data = Categories::all();
+        dd($data);
         $request->validate([
             'name'=> 'required | string | max:255',
             'email'=> 'required|email | string | max:30',
@@ -56,6 +58,7 @@ class BusinessController extends Controller
         $biz->photo = $path;
         $biz->save();
         return back()->with('plus', 'supplier saved!');
+        return inertia('Business/create', compact('data'));
         // return view('/RegisterBusiness');
     }
 
