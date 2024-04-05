@@ -39,7 +39,7 @@ const submit = () => {
                         <form enctype="multipart/form-data" @submit.prevent="submit"
                             class="bg-white w-full rounded shadow-2xl py-2 px-5 flex flex-col">
                             <div class="text-2xl font-bold mb-5 pt-4 flex justify-between">
-                                {{ data }}
+                                <!-- {{ data }} -->
                                 <span>Register Your Business</span>
                             </div>
                             <div class="md:flex gap-3 mb-5">

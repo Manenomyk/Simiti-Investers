@@ -16,6 +16,7 @@ use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\SearchBarController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\GetCategoriesController;
 use App\Http\Controllers\SupplierSearchController;
 
 /*
@@ -60,7 +61,9 @@ Route::middleware([
 
     Route::get('/RegisterBusiness', [BusinessController::class, 'index'])->name('biz.index');
     Route::get('/RegisterBusiness/{id}', [BusinessController::class, 'show'])->name('biz.show');
-    Route::get('/Business/create', [BusinessController::class, 'create'])->name('biz.create');
+    // Route::get('/Business/create', [GetCategoriesController::class, 'create'])->name('biz.create');
+    Route::get('/Business/create', [BusinessController::class,  'create'])->name('biz.create');
+    
     // Route::get('/RegisterBusiness/create', function(){
     //     dd('hey you');
     //     return Inertia::render('Business');

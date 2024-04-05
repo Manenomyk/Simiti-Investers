@@ -58,7 +58,7 @@ class BusinessController extends Controller
         $biz->photo = $path;
         $biz->save();
         return back()->with('plus', 'supplier saved!');
-        return inertia('Business/create', compact('data'));
+        return Inertia::render('Business/create', compact('data'));
         // return view('/RegisterBusiness');
     }
 
