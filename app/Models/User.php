@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Filament\Models\Contracts\FilamentUser;
 
 class User extends Authenticatable
 {
@@ -18,6 +19,10 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return str_ends_with($this->id, '1');
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -59,3 +64,12 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 }
+// class User extends Authenticatable implements FilamentUser
+// {
+//     // ...
+ 
+//     public function canAccessPanel(Panel $panel): bool
+//     {
+//         return str_ends_with($this->id, '1');
+//     }
+// }

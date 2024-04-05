@@ -1,5 +1,5 @@
 <script setup>
-import { HomeIcon } from "@heroicons/vue/24/solid";
+import { HomeIcon, UserCircleIcon, AcademicCapIcon , UsersIcon , BookOpenIcon    } from "@heroicons/vue/24/solid";
 import { Link } from "@inertiajs/vue3";
 import { ref } from "vue";
 
@@ -60,7 +60,7 @@ const menuOpen = ref(false);
                         :href="route('biz.create')"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
-                        <HomeIcon
+                        <UserCircleIcon
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Register Business
@@ -69,7 +69,7 @@ const menuOpen = ref(false);
                         :href="route('biz.index')"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
-                        <HomeIcon
+                        <AcademicCapIcon 
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Portfolio
@@ -88,7 +88,7 @@ const menuOpen = ref(false);
                         href="/Categories"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
-                        <HomeIcon
+                        <HomeIcon 
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Categories
@@ -106,7 +106,7 @@ const menuOpen = ref(false);
                         href="/Insurers"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
-                        <HomeIcon
+                        <UsersIcon 
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Insurance Providers
@@ -115,7 +115,7 @@ const menuOpen = ref(false);
                         href="/ServiceProviders"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
-                        <HomeIcon
+                        <UsersIcon 
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Logistic Providers
@@ -124,7 +124,7 @@ const menuOpen = ref(false);
                         href="/Blogs"
                         class="flex items-center py-2.5 text-gray-500 hover:text-orange-400 group"
                     >
-                        <HomeIcon
+                        <BookOpenIcon 
                             class="h-5 w-5 text-gray-400 mr-2 group-hover:text-orange-600"
                         />
                         Blogs
