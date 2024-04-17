@@ -14,7 +14,9 @@ use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\BlogPostsController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\SearchBarController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\GetCategoriesController;
 use App\Http\Controllers\SupplierSearchController;
 
 /*
@@ -59,7 +61,9 @@ Route::middleware([
 
     Route::get('/RegisterBusiness', [BusinessController::class, 'index'])->name('biz.index');
     Route::get('/RegisterBusiness/{id}', [BusinessController::class, 'show'])->name('biz.show');
-    Route::get('/Business/create', [BusinessController::class, 'create'])->name('biz.create');
+    // Route::get('/Business/create', [GetCategoriesController::class, 'create'])->name('biz.create');
+    Route::get('/Business/create', [BusinessController::class,  'create'])->name('biz.create');
+    
     // Route::get('/RegisterBusiness/create', function(){
     //     dd('hey you');
     //     return Inertia::render('Business');
@@ -81,11 +85,16 @@ Route::middleware([
 });
 Route::get('/Categories', [CategoriesController::class, 'index'])->name('catego.index');
 Route::get('/BlogPosts', [BlogPostsController::class, 'index'])->name('blo.index');
+Route::get('/SearchBar', [SearchBarController::class, 'index'])->name('sarch.index');
+
 Route::get('/Search/index', [SupplierSearchController::class, 'index'])->name('search.index');
 
 Route::get('/About', function(){
     return Inertia::render('About');
 });
+// Route::get('/SearchBar', function(){
+//     return Inertia::render('SearchBar');
+// });
 Route::get('/Package', function(){
     return Inertia::render('Package');
 });

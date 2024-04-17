@@ -70,7 +70,10 @@ class SuppliersResource extends Resource
                 Forms\Components\Section::make('')
                 ->description('Supplier Uploads')
                 ->schema([
-                    FileUpload::make('photo'),
+                    FileUpload::make('photo')
+                    ->columns(1)
+                    ->directory('suppImages')
+                    ->storeFileNamesIn('photos'),
                     Forms\Components\TextInput::make('annual_turnover')->required(),
                 Radio::make('boost')->required()
                 ->options([

@@ -24,13 +24,15 @@ class BusinessController extends Controller
         return Inertia::render('Business/store');
     }
     public function store( Request $request){
+        $data = Categories::all();
+        dd($data);
         $request->validate([
             'name'=> 'required | string | max:255',
             'email'=> 'required|email | string | max:30',
             'gender'=> 'required',
             'location'=> 'required',
             'region'=> 'required',
-            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,svg,webp|max:2048',
             'phone'=> 'required',
             'category'=> 'required',
             'sub_category'=> 'nullable',
@@ -56,6 +58,7 @@ class BusinessController extends Controller
         $biz->photo = $path;
         $biz->save();
         return back()->with('plus', 'supplier saved!');
+        return Inertia::render('Business/create', compact('data'));
         // return view('/RegisterBusiness');
     }
 
