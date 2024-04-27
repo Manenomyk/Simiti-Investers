@@ -1,6 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Blogs;
+use App\Models\Categories;
+use App\Models\Suppliers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +14,12 @@ class DashboardController extends Controller
 {
     public function index(): ?\Inertia\Response
     {
-        return Inertia::render('/Dashboard');
+        $data = User::count();
+        $suppliers = Suppliers::count();
+        $categories = Categories::count();
+        $blogs = Blogs::count();
+        dd($blogs);
+        return Inertia::render('/Dashboard', compact('data', 'suppliers', 'categories', 'blogs'));
         // if (Auth::user()->id == 1) {
         //     return Inertia::render('/admin');
         // }

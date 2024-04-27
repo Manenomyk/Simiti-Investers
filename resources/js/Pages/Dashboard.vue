@@ -5,6 +5,13 @@ import Sidebar from "../Components/Sidebar.vue";
 import Chart from 'chart.js/auto';
 
 
+defineProps({
+    data: Object,
+    suppliers: Object,
+    categories: Object,
+    blogs: Object,
+});
+
 </script>
 
 <template>
@@ -18,6 +25,7 @@ import Chart from 'chart.js/auto';
                     <Sidebar />
                 </div>
                 <div class="w-screen my-5  ">
+                   
                     <div class="flex gap-10 justify-center">
                         <div class="card1 mx-auto mb-3 ">
                             <div class="text-center mt-2">
@@ -26,7 +34,7 @@ import Chart from 'chart.js/auto';
                                 </p>
                             </div>
                             <div class="">
-                                <p class="text-3xl">154</p>
+                                <p class="text-3xl">{{data}}</p>
 
                             </div>
                         </div>
