@@ -10,11 +10,12 @@ class DashboardController extends Controller
 {
     public function index(): ?\Inertia\Response
     {
-        if (Auth::user()->id == 1) {
-            return Inertia::render('/admin');
-        }
-        else {
-            return Inertia::render('/Dashboard');
-        }
+        return Inertia::render('/Dashboard');
+        // if (Auth::user()->id == 1) {
+        //     return Inertia::render('/admin');
+        // }
+        // else {
+        //     return Inertia::render('/Dashboard');
+        // }
     }
 }
