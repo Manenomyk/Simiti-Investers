@@ -34,7 +34,7 @@ defineProps({
                                 </p>
                             </div>
                             <div class="">
-                                <p class="text-3xl">{{data}}</p>
+                                <p class="text-3xl">154</p>
 
                             </div>
                         </div>
